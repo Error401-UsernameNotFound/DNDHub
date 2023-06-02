@@ -117,7 +117,6 @@ while True:
         mainWindow = rq.swapWindow(mainWindow,classesMenu)
     
     if event == 'Class':
-        mainWindow.add_row([sg.])
         pass
 
 
