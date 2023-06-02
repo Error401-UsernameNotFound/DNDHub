@@ -51,11 +51,17 @@ class requester:
             if i.find('</span></h2>') != -1:
                 a = i.find('<span>')+6
                 sub = i[a:i.find('</span>')]
+                if allSubraces.count(sub) == 1: sub += '-ua'
                 allSubraces.append(sub)
                 currentSubrace = sub
                 infoDict[currentSubrace] = ''
+            
+            if i.find('/p') != -1:
+                t1 = i[i.find('<strong>')+8:i.find('</strong>')-1]
+                t1 = self.removeEffects(t1)
+                infoDict[currentSubrace] += t1 + '\n\n'
 
-            if i.find('<strong>') != -1: #bullet point
+            elif i.find('<strong>') != -1: #bullet point
                 t1 = i[i.find('<strong>')+8:i.find('</strong>')-1]
                 t2 = i[i.find('</strong>')+10:i.find('</li>')]
 
@@ -72,6 +78,12 @@ class requester:
         window = newWindow
         return window
     
+    def getClassinformation(self,clas):
+        web = requests.get(self.source+'/lineage:'+clas)
+        text = web.text.split('\n')
+
+
+
     def removeEffects(self,dirtytext:str) ->str:
         c = 0
         a = 0

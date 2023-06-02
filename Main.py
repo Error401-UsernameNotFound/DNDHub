@@ -54,6 +54,9 @@ creationMenu = [
     [sg.Button("Submit",key="Submit Preferences",s=(60,1),button_color = (C[1],B),border_width=0)]
 ]
 
+
+
+
 # Create the main window
 mainWindow = sg.Window('D&D Helper', startlayout)
 
@@ -91,6 +94,7 @@ while True:
             [sg.Text('Choose a Race',s=(30,1),font=(sg.DEFAULT_FONT[0],20)),sg.Text('Subrace',s=(8,1),pad=(0,0)),sg.DropDown(['Subrace'],'Subrace',enable_events=True,readonly=True,key='subrace',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B)]
         ]
         raceMenu.append([sg.Listbox(races,no_scrollbar=True,s=(20,20),key="Race",enable_events=True),sg.Multiline("",no_scrollbar=True,s=(70,20),key='info')])
+        raceMenu.append([sg.Button("Submit",key="Submit Race",s=(30,1),button_color = (C[1],B),border_width=0)])
         mainWindow = rq.swapWindow(mainWindow,raceMenu)
     
 
@@ -100,9 +104,21 @@ while True:
         mainWindow["subrace"].update(values=subraceList,value=subraceList[0])
         mainWindow["info"].update(infoDict[subraceList[0]])
 
-    if event == "subrace":
+    elif event == "subrace":
         mainWindow["info"].update(infoDict[values['subrace']])
-        
+    
+    elif event == "Submit Race":
+        classes = ['Artificer','Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard']
+        if tempCharacter['CR']: classes.append('Blood-Hunter')
+
+        classesMenu = [
+            [sg.Text('Choose a Class',s=(30,1),font=(sg.DEFAULT_FONT[0],20)),sg.DropDown(classes,'Artificer',enable_events=True,readonly=True,key='classes',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B),sg.Text('level',s=(8,1),pad=(0,0)),sg.DropDown(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20',],'1',enable_events=True,readonly=True,key='level',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B)]
+        ]
+        mainWindow = rq.swapWindow(mainWindow,classesMenu)
+    
+    if event == 'Class':
+        mainWindow.add_row([sg.])
+        pass
 
 
 mainWindow.close()
