@@ -54,18 +54,13 @@ creationMenu = [
     [sg.Button("Submit",key="Submit Preferences",s=(60,1),button_color = (C[1],B),border_width=0)]
 ]
 
-
-
-
 # Create the main window
 mainWindow = sg.Window('D&D Helper', startlayout)
 
 #Variables 
 state = 0
 tempCharacter = {}
-infoDict = {}
 subraceList = []
-#stuff to be done frame 1
 
 while True:
     event, values = mainWindow.read()
@@ -91,21 +86,21 @@ while True:
         races = rq.getRaces()
 
         raceMenu = [
-            [sg.Text('Choose a Race',s=(30,1),font=(sg.DEFAULT_FONT[0],20)),sg.Text('Subrace',s=(8,1),pad=(0,0)),sg.DropDown(['Subrace'],'Subrace',enable_events=True,readonly=True,key='subrace',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B)]
+            [sg.Text('Choose a Race',s=(15,1),font=(sg.DEFAULT_FONT[0],20)),sg.Text('Subrace',s=(7,1),pad=(0,0)),sg.DropDown(['Subrace'],'Subrace',enable_events=True,readonly=True,key='subrace',s=(55,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B)]
         ]
-        raceMenu.append([sg.Listbox(races,no_scrollbar=True,s=(20,20),key="Race",enable_events=True),sg.Multiline("",no_scrollbar=True,s=(70,20),key='info')])
-        raceMenu.append([sg.Button("Submit",key="Submit Race",s=(30,1),button_color = (C[1],B),border_width=0)])
+        raceMenu.append([sg.Listbox(races,no_scrollbar=True,s=(20,20),key="Race",enable_events=True),sg.Multiline("",no_scrollbar=True,s=(80,20),key='info',)])
+        raceMenu.append([sg.Button("Submit",key="Submit Race",s=(19,1),pad=(0,0),button_color = (C[1],B),border_width=0)])
         mainWindow = rq.swapWindow(mainWindow,raceMenu)
     
 
     #race Menu
     if event == "Race":
-        infoDict, subraceList = rq.getRaceInformation(values["Race"][0])
+        subraceList = rq.getRaceInformation(values["Race"][0])
         mainWindow["subrace"].update(values=subraceList,value=subraceList[0])
-        mainWindow["info"].update(infoDict[subraceList[0]])
+        mainWindow["info"].update(rq.getRaceFile(subraceList[0]))
 
     elif event == "subrace":
-        mainWindow["info"].update(infoDict[values['subrace']])
+        mainWindow["info"].update(rq.getRaceFile(values['subrace']))
     
     elif event == "Submit Race":
         classes = ['Artificer','Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard']
