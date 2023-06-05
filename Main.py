@@ -35,11 +35,6 @@ creationMenu = [
     [sg.Text('Name'), sg.Input(default_text="Character",key="Name")],
     [sg.Text('Character Preferences',s=(30,1),font=(sg.DEFAULT_FONT[0],20))],
     [sg.Checkbox("Custom Homebrew",key="CH",pad=(0,0))],
-    [sg.Checkbox("'Offical' Homebrew",key="OH",pad=(0,0))],
-    [sg.Checkbox("Unearthed Arcana",key="OH",pad=(0,0))],
-    [sg.Checkbox("Strixhaven",key="OH",pad=(0,0))],
-    [sg.Checkbox("Setting Specific*",key="OH",pad=(0,0))],
-    [sg.Checkbox("Critical Role Content",key="CR",pad=(0,0))],
     [sg.Text('Optional Features',pad=(4,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Checkbox("Optional Class Features",key="OF")],
     [sg.Checkbox("Customize Your Origin",key="CO")],
@@ -56,8 +51,9 @@ creationMenu = [
 ]
 
 
+classes = ['Artificer','Barbarian','Bard','Blood-Hunter','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard']
 classesMenu = [
-    [sg.Text('Choose a Class',s=(30,1),font=(sg.DEFAULT_FONT[0],20)),sg.DropDown([],'Artificer',enable_events=True,readonly=True,key='classes',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B),sg.Text('level',s=(8,1),pad=(0,0)),sg.DropDown(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20',],'1',enable_events=True,readonly=True,key='level',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B,button_arrow_color=C[0])]
+    [sg.Text('Choose a Class',s=(30,1),font=(sg.DEFAULT_FONT[0],20)),sg.DropDown(classes,'Artificer',enable_events=True,readonly=True,key='classes',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B),sg.Text('level',s=(8,1),pad=(0,0)),sg.DropDown(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20',],'1',enable_events=True,readonly=True,key='level',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B,button_arrow_color=C[0])]
 ]
 
 # Create the main window
@@ -66,8 +62,9 @@ mainWindow = sg.Window('D&D Helper', startlayout)
 #Variables 
 state = 0
 tempCharacter = {}
+
 subraceList = []
-classes = ['Artificer','Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard']
+currentRace = ''
 
 while True:
     event, values = mainWindow.read()
@@ -109,16 +106,15 @@ while True:
             subraceList = rq.getSavedRaceInformation(values["Race"][0])
         mainWindow["subrace"].update(values=subraceList,value=subraceList[0])
         mainWindow["info"].update(rq.getRaceFile(subraceList[0]))
+        currentRace = subraceList[0]
 
     elif event == "subrace":
         mainWindow["info"].update(rq.getRaceFile(values['subrace']))
+        currentRace = values['subrace']
     
     elif event == "Submit Race":
-        if tempCharacter['CR']: classes.append('Blood-Hunter'); classes.sort()
+        tempCharacter['race'] = currentRace
         mainWindow = rq.swapWindow(mainWindow,classesMenu)
-        #first frame things
-        event, values = mainWindow.read(timeout=0)
-        mainWindow['classes'].update(values=classes)
     
     if event == 'classes':
         #try and load / get that class

@@ -204,8 +204,49 @@ class requester:
                 info += self.removeEffects(i) + '\n'
 
         #save the class generated here
+        #format into layout...
+        with open('uhhh.txt','w',encoding='utf-8') as w: w.write(info)
+        infoSplit = info.split('\n')
+        nextLayout = 'Text'
+        tText = ''
+        currentKey = ''
+        tList = []
+        rows = 0
+        layout = {}
+        for i in range(1,20): layout[i] = []
+        level = 0
+        count = 0
+        for i in infoSplit:
+            if i[0:3] == 'At ':
+                layout[level].append(self.compileLayout(tText,tList,currentKey,nextLayout))
+                level = int(i[4])
+                nextLayout = 'Text'
+                tList = []
+
+            elif i[0:6] == '------':
+                #table row
+                if infoSplit[count-2][0:6] != '------':
+                    #new table
+                    tText = tText.removesuffix(infoSplit[count-2])
+                    layout[level].append(self.compileLayout(tText,tList,currentKey,nextLayout))
+                    #new stuff
+                    tText = infoSplit[count-2]
+                    currentKey = infoSplit[count-2]
+                    nextLayout = 'Table'
+                    tList = []
+                else:
+                    rows += 1
+
+            
+
+            count +=1
+            pass
         return info
 
+    def compileLayout(self,t,list,key,layoutType):
+        if layoutType == 'Text':
+            return sg.Multiline(t,no_scrollbar=True,s=(80,20),key=key)
+        pass
 
     def removeEffects(self,dirtytext:str) ->str:
         c = 0
