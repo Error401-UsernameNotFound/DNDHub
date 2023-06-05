@@ -1,11 +1,7 @@
 Name: Shifter- Cliffwalk
-ASI: Ability Score Increase:
-Your Dexterity score increases by 1.
+ASI: Ability Score Increase. Your Dexterity score increases by 1.
+
 Description:
-ce: Unearthed Arcana 1 - Eberron
-Your cliffwalk heritage grants you the agility of a mountain goat.
+ce: Unearthed Arcana 1 - EberronYour cliffwalk heritage grants you the agility of a mountain goat.
 Features:
-
-Shifting Feature:
-While shifting, you gain a climb speed of 30 feet.
-
+Shifting Feature. While shifting, you gain a climb speed of 30 feet.

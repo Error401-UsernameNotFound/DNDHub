@@ -1,4 +1,5 @@
 import PySimpleGUI as sg
+from requests.exceptions import ConnectionError
 import Backend 
 
 rq = Backend.requester()
@@ -29,7 +30,7 @@ startlayout = [
     [CharacterColumn]
 ]
 
-#creation screen one
+
 creationMenu = [
     [sg.Text('Name'), sg.Input(default_text="Character",key="Name")],
     [sg.Text('Character Preferences',s=(30,1),font=(sg.DEFAULT_FONT[0],20))],
@@ -54,6 +55,11 @@ creationMenu = [
     [sg.Button("Submit",key="Submit Preferences",s=(60,1),button_color = (C[1],B),border_width=0)]
 ]
 
+
+classesMenu = [
+    [sg.Text('Choose a Class',s=(30,1),font=(sg.DEFAULT_FONT[0],20)),sg.DropDown([],'Artificer',enable_events=True,readonly=True,key='classes',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B),sg.Text('level',s=(8,1),pad=(0,0)),sg.DropDown(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20',],'1',enable_events=True,readonly=True,key='level',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B,button_arrow_color=C[0])]
+]
+
 # Create the main window
 mainWindow = sg.Window('D&D Helper', startlayout)
 
@@ -61,6 +67,7 @@ mainWindow = sg.Window('D&D Helper', startlayout)
 state = 0
 tempCharacter = {}
 subraceList = []
+classes = ['Artificer','Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard']
 
 while True:
     event, values = mainWindow.read()
@@ -95,7 +102,11 @@ while True:
 
     #race Menu
     if event == "Race":
-        subraceList = rq.getRaceInformation(values["Race"][0])
+        try:
+            subraceList = rq.getRaceInformation(values["Race"][0])
+        except ConnectionError:
+            #no wifi
+            subraceList = rq.getSavedRaceInformation(values["Race"][0])
         mainWindow["subrace"].update(values=subraceList,value=subraceList[0])
         mainWindow["info"].update(rq.getRaceFile(subraceList[0]))
 
@@ -103,16 +114,16 @@ while True:
         mainWindow["info"].update(rq.getRaceFile(values['subrace']))
     
     elif event == "Submit Race":
-        classes = ['Artificer','Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard']
-        if tempCharacter['CR']: classes.append('Blood-Hunter')
-
-        classesMenu = [
-            [sg.Text('Choose a Class',s=(30,1),font=(sg.DEFAULT_FONT[0],20)),sg.DropDown(classes,'Artificer',enable_events=True,readonly=True,key='classes',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B),sg.Text('level',s=(8,1),pad=(0,0)),sg.DropDown(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20',],'1',enable_events=True,readonly=True,key='level',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B)]
-        ]
+        if tempCharacter['CR']: classes.append('Blood-Hunter'); classes.sort()
         mainWindow = rq.swapWindow(mainWindow,classesMenu)
+        #first frame things
+        event, values = mainWindow.read(timeout=0)
+        mainWindow['classes'].update(values=classes)
     
-    if event == 'Class':
-        pass
+    if event == 'classes':
+        #try and load / get that class
+        info = rq.getClassinformation(values['classes'])
+        
 
 
 mainWindow.close()

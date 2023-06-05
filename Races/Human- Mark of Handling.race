@@ -1,20 +1,29 @@
 Name: Human- Mark of Handling
-ASI: Ability Score Increase:
-Your Wisdom score increases by 2, and one other Ability Score of your choice increases by 1.
+ASI: Ability Score Increase. Your Wisdom score increases by 2, and one other Ability Score of your choice increases by 1.
+
 Description:
 If your Human has the Mark of Handling, replace all Racial Traits found in the Player's Handbook with these, except for Age, Alignment, Size, and Speed.
 Features:
+Wild Intuition. Whenever you make a Wisdom (Animal Handling) or a Intelligence (Nature) check, you can roll a d4 and add the number rolled to the total ability check.
 
-Wild Intuition:
-Whenever you make a Wisdom (Animal Handling) or a Intelligence (Nature) check, you can roll a d4 and add the number rolled to the total ability check.
+Primal Connection. You can cast the Animal Friendship spell and the Speak With Animals with this trait, requiring no material components. Once you cast either spell with this trait, you can't cast that spell again until you finish a Long Rest. Wisdom is your Spellcasting Ability for these spells.
 
-Primal Connection:
-You can cast the Animal Friendship spell and the Speak With Animals with this trait, requiring no material components. Once you cast either spell with this trait, you can't cast that spell again until you finish a Long Rest. Wisdom is your Spellcasting Ability for these spells.
+The Bigger They Are. Starting at 3rd level, you can target a Beast or a Monstrosity when you cast Animal Friendship or Speak With Animals, provided that the creature's intelligence is 3 or lower.
 
-The Bigger They Are:
-Starting at 3rd level, you can target a Beast or a Monstrosity when you cast Animal Friendship or Speak With Animals, provided that the creature's intelligence is 3 or lower.
-
-Spells of the Mark:
-If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Handling Spells table are added to the spell list of your Spellcasting class.
-
+Spells of the Mark. If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Handling Spells table are added to the spell list of your Spellcasting class.
 Mark of Handling Spell
+
+Spell Level		Spell		
+--------------------------------------------------------------------------------------------------------------
+1st		Animal Friendship		
+--------------------------------------------------------------------------------------------------------------
+2nd		Beast Sense		
+--------------------------------------------------------------------------------------------------------------
+3rd		Beacon of Hope		
+--------------------------------------------------------------------------------------------------------------
+4th		Aura of Life		
+--------------------------------------------------------------------------------------------------------------
+5th		Awaken		
+--------------------------------------------------------------------------------------------------------------
+
+

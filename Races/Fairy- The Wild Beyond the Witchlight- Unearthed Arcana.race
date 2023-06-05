@@ -1,30 +1,47 @@
 Name: Fairy- The Wild Beyond the Witchlight- Unearthed Arcana
-ASI: Ability Score Increase:
-Increase one ability score by 2, and increase a different one by 1.
+ASI: 
+
 Description:
-ce: Unearthed Arcana 77 - Folk of the Feywild
-The Feywild is home to many fantastic peoples, including fairies. Fairies are a wee folk, but not nearly as much so as their pixie and sprite friends. The first fairies spoke Elvish, Goblin, or Sylvan, and encounters with human visitors prompted many of them to learn Common as well.
-Infused with the magic of the Feywild, most fairies look like Small elves with insectile wings, but each fairy has a special physical characteristic that sets the fairy apart. For your fairy, roll on the Fey Characteristics table or choose an option from it. You're also free to come up with your own characteristic if none of the suggestions below fit your character.
+ce: Unearthed Arcana 77 - Folk of the FeywildThe Feywild is home to many fantastic peoples, including fairies. Fairies are a wee folk, but not nearly as much so as their pixie and sprite friends. The first fairies spoke Elvish, Goblin, or Sylvan, and encounters with human visitors prompted many of them to learn Common as well.Infused with the magic of the Feywild, most fairies look like Small elves with insectile wings, but each fairy has a special physical characteristic that sets the fairy apart. For your fairy, roll on the Fey Characteristics table or choose an option from it. You're also free to come up with your own characteristic if none of the suggestions below fit your character.
 Features:
 
-Type:
-You are a Fey.
 
-Size:
-Your size is Small.
+Fey Characteristics
 
-Speed:
-Your walking speed is 30 feet.
+--------------------------------------------------------------------------------------------------------------
+d8		Characteristic		
+--------------------------------------------------------------------------------------------------------------
+1		You have small wings like those of an insect.		
+--------------------------------------------------------------------------------------------------------------
+2		You have shimmering, multicolored skin.		
+--------------------------------------------------------------------------------------------------------------
+3		You have exceptionally large ears.		
+--------------------------------------------------------------------------------------------------------------
+4		A constant, glittering mist surrounds you.		
+--------------------------------------------------------------------------------------------------------------
+5		You have a small spectral horn on your forehead, like a little unicorn horn.		
+--------------------------------------------------------------------------------------------------------------
+6		Your hands never look dirty.		
+--------------------------------------------------------------------------------------------------------------
+7		You smell like fresh brownies.		
+--------------------------------------------------------------------------------------------------------------
+8		A noticeable, harmless chill surrounds you.		
+--------------------------------------------------------------------------------------------------------------
 
-Fairy Flight:
-You have a flying speed equal to your walking speed and can hover. This flight is magical and does not require the use of your wings (if you have them).
 
-Fairy Magic:
-You know the Druidcraft and Faerie Fire spells. You can cast Faerie Fire without expending a spell slot, and you must finish a long rest before you can cast it this way again. You can also cast this spell using any spell slots you have. Your spellcasting ability for these spells is your choice of Intelligence, Wisdom, or Charisma.
 
-Fey Passage:
-You can squeeze through a space as narrow as 1 inch wide.
+Ability Score Increase. Increase one ability score by 2, and increase a different one by 1.
 
-Languages:
-You can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character.
+Type. You are a Fey.
 
+Size. Your size is Small.
+
+Speed. Your walking speed is 30 feet.
+
+Fairy Flight. You have a flying speed equal to your walking speed and can hover. This flight is magical and does not require the use of your wings (if you have them).
+
+Fairy Magic. You know the Druidcraft and Faerie Fire spells. You can cast Faerie Fire without expending a spell slot, and you must finish a long rest before you can cast it this way again. You can also cast this spell using any spell slots you have. Your spellcasting ability for these spells is your choice of Intelligence, Wisdom, or Charisma.
+
+Fey Passage. You can squeeze through a space as narrow as 1 inch wide.
+
+Languages. You can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character.

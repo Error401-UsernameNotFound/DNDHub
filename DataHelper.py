@@ -32,6 +32,15 @@ class dataHelper:
         return data
 
     def saveClass(self,data:dict):
+        try: Rfile = open('Races/'+data['Name']+'.race','x',encoding='utf-8')
+        except: Rfile = open('Races/'+data['Name']+'.race','w',encoding='utf-8')
+        t:list[str] = [
+            'Name: ' + data['Name'],
+            'Info: ' + data['Info'], #could be multiple lines
+            'Layout:\n' + data['Layout'] #could be multiple lines
+        ]
+        Rfile.writelines('\n'.join(t))
+        Rfile.close()
         pass
     def loadClass(self):
         pass

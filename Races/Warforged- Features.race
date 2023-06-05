@@ -1,0 +1,46 @@
+Name: Warforged- Features
+ASI: Ability Score Increase. Your Constitution score increases by 1.
+
+Description:
+ce: Wayfinder's Guide to Eberron
+Features:
+Age. A typical warforged is between two and thirty years old. The maximum lifespan of the warforged remains a mystery; so far, warforged have shown no signs of deterioration due to age.
+
+Alignment. Most warforged take comfort in order and discipline, tending toward law and neutrality. But some have absorbed the morality – or lack thereof – of the beings with which they served.
+
+Size. Your size is Medium. Most warforged stand between 5 and 6&#160;1/2 feet tall. Weight and build are affected by subrace.
+
+Speed. Your base walking speed is 30 feet.
+
+Warforged Resilience. You were created to have remarkable fortitude, represented by the following benefits.
+
+You have advantage on saving throws against being poisoned, and you have resistance to poison damage.
+You are immune to disease.
+You don’t need to eat, drink, or breathe.
+You don't need to sleep and don't suffer the effects of exhaustion due to lack of rest, and magic can’t put you to sleep.
+
+Sentry's Rest. When you take a long rest, you must spend at least six hours in an inactive, motionless state, rather than sleeping. In this state, you appear inert, but it doesn’t render you unconscious, and you can see and hear as normal.
+
+Integrated Protection. Your body has built-in defensive layers, which determine your armor class. You gain no benefit from wearing armor, but if you are using a shield, you apply its bonus as normal.
+
+You can alter your body to enter different defensive modes; each time you finish a long rest, choose one mode to adopt from the Integrated Protection table, provided you meet the mode’s prerequisite.
+
+
+
+
+
+Integrated Protection
+
+--------------------------------------------------------------------------------------------------------------
+Mode		Prerequisite		Effect		
+--------------------------------------------------------------------------------------------------------------
+Darkwood Core (unarmored)		None		AC = 11 + your Dexterity modifier (add proficiency bonus if proficient with light armor).		
+--------------------------------------------------------------------------------------------------------------
+Composite Plating (armored)		Medium armor proficiency		AC = 13 + your Dexterity modifier (maximum of 2) + your proficiency bonus.		
+--------------------------------------------------------------------------------------------------------------
+Heavy Plating (armored)		Heavy armor proficiency		AC = 16 + your proficiency bonus; disadvantage on Dexterity (Stealth) checks.		
+--------------------------------------------------------------------------------------------------------------
+
+
+
+Languages. You can speak, read, and write Common.

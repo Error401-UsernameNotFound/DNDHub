@@ -1,20 +1,29 @@
 Name: Half-elf- Mark of Storm
-ASI: Ability Score Increase:
-Your Charisma score increases by 2, and your Dexterity score increases by 1.
+ASI: Ability Score Increase. Your Charisma score increases by 2, and your Dexterity score increases by 1.
+
 Description:
 If your Half-Elf has the Mark of Storm, these features replace the Ability Score Increase and the Half-Elf Versatility traits in the Player's Handbook
 Features:
+Windwright's Intuition. Whenever you make a Dexterity (Acrobatics) check or any Ability Check involving Navigator's Tools, you can roll a d4 and add the number rolled to the total ability check.
 
-Windwright's Intuition:
-Whenever you make a Dexterity (Acrobatics) check or any Ability Check involving Navigator's Tools, you can roll a d4 and add the number rolled to the total ability check.
+Storm's Boon. You have resistance to Lightning damage.
 
-Storm's Boon:
-You have resistance to Lightning damage.
+Headwinds. You know the Gust cantrip. Starting at 3rd level, you can also cast the Gust of Wind spell with it. Once you cast this spell with this trait, you can't cast that spell again until you finish a Long Rest. Charisma is your Spellcasting Ability for this spell.
 
-Headwinds:
-You know the Gust cantrip. Starting at 3rd level, you can also cast the Gust of Wind spell with it. Once you cast this spell with this trait, you can't cast that spell again until you finish a Long Rest. Charisma is your Spellcasting Ability for this spell.
-
-Spells of the Mark:
-If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Storm Spells table are added to the spell list of your Spellcasting class.
-
+Spells of the Mark. If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Storm Spells table are added to the spell list of your Spellcasting class.
 Mark of Storm Spell
+
+Spell Level		Spell		
+--------------------------------------------------------------------------------------------------------------
+1st		Feather Fall		
+--------------------------------------------------------------------------------------------------------------
+2nd		Gust of Wind		
+--------------------------------------------------------------------------------------------------------------
+3rd		Sleet Storm		
+--------------------------------------------------------------------------------------------------------------
+4th		Conjure Minor Elementals		
+--------------------------------------------------------------------------------------------------------------
+5th		Conjure Elemental		
+--------------------------------------------------------------------------------------------------------------
+
+

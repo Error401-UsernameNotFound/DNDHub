@@ -1,39 +1,61 @@
 import requests
 import PySimpleGUI as sg
 import DataHelper as dh
+from requests.exceptions import ConnectionError
+import os
+
+
 
 class requester:
     def __init__(self) -> None:
         self.source = "http://dnd5e.wikidot.com"
-        self.mainPage = requests.get(self.source)
         self.dh = dh.dataHelper()
         self.infoDict = {}
         self.allSubraces = []
     def getRaces(self) -> list:
-        txt = self.mainPage.text.split('\n')
-        #isolate the race coloum
-        rawRaces = []
         races = []
-        areaOfIntrest = False
-        for i in txt:
-            if i == '<p><span style="font-size:140%;"><a href="/lineage">All Lineages</a></span></p>':
-                areaOfIntrest = True
-            if i == '<h3 id="toc2"><span>Common Backgrounds</span></h3>':
-                areaOfIntrest = False
-            if areaOfIntrest:
-                rawRaces.append(i)
-        
-        #isolate exact race
+        rawRaces = []
+        try:
+            txt = requests.get(self.source+'/lineage').text.split('\n')
+            #isolate the race coloum
+            areaOfIntrest = False
+            for i in txt:
+                if i == '            <!-- wikidot_top_728x90 -->':
+                    areaOfIntrest = True
+                if i == '            <!-- wikidot_bottom_300x250 -->':
+                    areaOfIntrest = False
+                if areaOfIntrest:
+                    rawRaces.append(i)
+            
+            #isolate exact race
+            for i in rawRaces:
+                i:str
+                if i.find('/lineage:') != -1:
+                    a = i.find(':') + 1
+                    R = i[a:i.find('"',a)]
+                    races.append(R.capitalize())
+            races.sort()
+            return races
+        except ConnectionError as e:
+            #no wifi
+            rawRaces = os.listdir(os.path.curdir+'/Races')
+            MainRaces = []
+            for i in rawRaces:
+                if i.find('- ') == -1:
+                    MainRaces.append(i.removesuffix('.race'))
+            return MainRaces
+    
+    def getSavedRaceInformation(self,race:str):
+        rawRaces = os.listdir(os.path.curdir+'/Races')
+        MainRaces = [race]
         for i in rawRaces:
-            i:str
-            if i.find('/lineage:') != -1:
-                a = i.find(':') + 1
-                R = i[a:i.find('"',a)]
-                races.append(R.capitalize())
-        races.sort()
-        return races
+            if i.find(race) != -1 and i != race+'.race':
+                MainRaces.append(i.removesuffix('.race'))
+        return MainRaces
+
     def getRaceInformation(self,race:str):
         web = requests.get(self.source+'/lineage:'+race)
+        #with open('wididot.txt','w',encoding='utf-8') as w: w.write(web.text)
         text = web.text.split('\n')
         areaOfIntrest = False
         rawInformation = []
@@ -51,6 +73,9 @@ class requester:
         
         for i in rawInformation:
             i:str
+            if i.find('&quot;'):
+                i = ''.join(i.split('&quot;'))
+
             if i.find('<h1 id=') != -1: #new subrace maybe
                 a  = i.find('<span>')+6
                 sufix = i[a:i.find('</span>')]
@@ -71,20 +96,38 @@ class requester:
                 self.allSubraces.append(sub)
                 currentSubrace = sub
                 self.infoDict[currentSubrace] = ''
-            
+
+            #table logic from the other thing
+            if i[0:4] == '</tr':
+                t1 = '\n--------------------------------------------------------------------------------------------------------------\n'
+                self.infoDict[currentSubrace] += t1
+            elif i == '</table>' or i== '<table class="wiki-content-table">':
+                t1 = '\n\n'
+                self.infoDict[currentSubrace] += t1
+            elif i[0:4] == '<th>':#title
+                t1 = self.removeEffects(i[4:i.find('</')]) + '\t\t'
+                self.infoDict[currentSubrace] += t1
+            elif i[0:12] =='<th colspan=': #new table.. kinda
+                t1 = '\n\n\n'+ self.removeEffects(i)+'\n'
+                self.infoDict[currentSubrace] += t1
+            elif i[0:4] == '<td>': #element
+                t1 = self.removeEffects(i[4:i.find('</')]) + '\t\t'
+                self.infoDict[currentSubrace] += t1
+            if i.find('i="toc') != -1:
+                t1 = '\n\n\n'+self.removeEffects(i[i.find('<span>')+6:i.find('</span>')]) + '\n\n\n'
+                self.infoDict[currentSubrace] += t1
+            #clean stuff?
             if i.find('/p') != -1: #clean line marker
                 t1 = i[i.find('<strong>')+8:i.find('</strong>')-1]
                 t1 = self.removeEffects(t1)
-                self.infoDict[currentSubrace] += t1 + '\n'
+                self.infoDict[currentSubrace] += t1
+            elif i.find('<strong>') != -1 or i[0:4] =='<li>': #bullet point
+                t1 = self.removeEffects(i)
+                self.infoDict[currentSubrace] += t1 +'\n'
+            elif i == '<ul>':
+                self.infoDict[currentSubrace] += '\n'
 
-            elif i.find('<strong>') != -1: #bullet point
-                t1 = i[i.find('<strong>')+8:i.find('</strong>')-1]
-                t2 = i[i.find('</strong>')+10:i.find('</li>')]
 
-                t1 = self.removeEffects(t1)
-                t2 = self.removeEffects(t2)
-                self.infoDict[currentSubrace] += t1 + ':\n' + t2 + '\n\n'
-        
         #check for blank subraces
         for i in self.allSubraces.copy():
             if len(self.infoDict[i]) < 10:
@@ -122,9 +165,46 @@ class requester:
         window = newWindow
         return window
     
-    def getClassinformation(self,clas): #inProgress
-        web = requests.get(self.source+'/lineage:'+clas)
+    def getClassinformation(self,clas:str):
+        web = requests.get(self.source+'/'+clas)
+        #web = open('wididot.txt',encoding='utf-8').readlines()
         text = web.text.split('\n')
+        areaOfIntrest = False
+        rawInformation = []
+        sectionDict = {}
+        section = 'Description'
+        sectionDict[section] = ''
+        info = ''
+        for i in text:
+            if i == '            <!-- wikidot_top_728x90 -->':
+                areaOfIntrest = True
+            if i == '            <!-- wikidot_bottom_300x250 -->':
+                areaOfIntrest = False
+            if areaOfIntrest:
+                rawInformation.append(i)
+        
+        for i in rawInformation:
+            #table things :)
+            i:str
+            if i[0:4] == '</tr':
+                info += '\n--------------------------------------------------------------------------------------------------------------\n'
+            if i == '</table>' or i== '<table class="wiki-content-table">':
+                info += '\n\n'
+            if i[0:4] == '<th>':#elements
+                info += self.removeEffects(i[4:i.find('</')]) + '\t\t\t'
+            if i[0:12] =='<th colspan=': #new table.. kinda
+                info += '\n\n\n'+ self.removeEffects(i)+'\n'
+            if i[0:4] == '<td>': #title
+                info += self.removeEffects(i[4:i.find('</')]) + ' \t'
+            if i.find('i="toc') != -1:
+                info += '\n\n\n'+self.removeEffects(i[i.find('<span>')+6:i.find('</span>')]) + '\n\n\n'
+            if i.find('<p>') != -1:
+                info += self.removeEffects(i[3:len(i)]) + '\n\n'
+            elif i[0:8] =='<strong>' or i[0:4] =='<li>':
+                info += self.removeEffects(i) + '\n'
+
+        #save the class generated here
+        return info
 
 
     def removeEffects(self,dirtytext:str) ->str:
@@ -144,4 +224,5 @@ class requester:
                 else:
                     cleantext = cleantext.removesuffix(r)
             c += 1
+        cleantext = cleantext.removeprefix("&nbsp;")
         return cleantext
