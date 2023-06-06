@@ -53,7 +53,8 @@ creationMenu = [
 
 classes = ['Artificer','Barbarian','Bard','Blood-Hunter','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard']
 classesMenu = [
-    [sg.Text('Choose a Class',s=(30,1),font=(sg.DEFAULT_FONT[0],20)),sg.DropDown(classes,'Artificer',enable_events=True,readonly=True,key='classes',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B),sg.Text('level',s=(8,1),pad=(0,0)),sg.DropDown(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20',],'1',enable_events=True,readonly=True,key='level',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B,button_arrow_color=C[0])]
+    [sg.Text('Choose a Class',s=(45,1),font=(sg.DEFAULT_FONT[0],20)),sg.DropDown(classes,enable_events=True,readonly=True,key='classes',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B),sg.Text('level',s=(8,1),pad=(0,0)),sg.DropDown(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20',],'1',enable_events=True,readonly=True,key='level',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B,button_arrow_color=C[0])],
+    [sg.Multiline('',no_scrollbar=True,s=(150,30),key='info',)]
 ]
 
 # Create the main window
@@ -114,12 +115,11 @@ while True:
     
     elif event == "Submit Race":
         tempCharacter['race'] = currentRace
+        
         mainWindow = rq.swapWindow(mainWindow,classesMenu)
     
     if event == 'classes':
-        #try and load / get that class
-        info = rq.getClassinformation(values['classes'])
-        
+        mainWindow["info"].update(rq.checkForClassFile(values['classes']))
 
 
 mainWindow.close()

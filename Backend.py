@@ -5,6 +5,8 @@ from requests.exceptions import ConnectionError
 import os
 
 
+C = sg.theme_button_color()
+B =  sg.theme_background_color()
 
 class requester:
     def __init__(self) -> None:
@@ -12,6 +14,7 @@ class requester:
         self.dh = dh.dataHelper()
         self.infoDict = {}
         self.allSubraces = []
+        self.simpleWeapons = ['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear']
     def getRaces(self) -> list:
         races = []
         rawRaces = []
@@ -186,12 +189,14 @@ class requester:
         for i in rawInformation:
             #table things :)
             i:str
+            if i.find('&amp;'):
+                i = i.replace('&amp;','&')
             if i[0:4] == '</tr':
-                info += '\n--------------------------------------------------------------------------------------------------------------\n'
+                info += '\n----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n'
             if i == '</table>' or i== '<table class="wiki-content-table">':
                 info += '\n\n'
             if i[0:4] == '<th>':#elements
-                info += self.removeEffects(i[4:i.find('</')]) + '\t\t\t'
+                info += self.removeEffects(i[4:i.find('</')]) + '\t'
             if i[0:12] =='<th colspan=': #new table.. kinda
                 info += '\n\n\n'+ self.removeEffects(i)+'\n'
             if i[0:4] == '<td>': #title
@@ -205,48 +210,74 @@ class requester:
 
         #save the class generated here
         #format into layout...
-        with open('uhhh.txt','w',encoding='utf-8') as w: w.write(info)
-        infoSplit = info.split('\n')
+        infoSplit:list[str] = info.split('\n')
         nextLayout = 'Text'
         tText = ''
         currentKey = ''
         tList = []
-        rows = 0
-        layout = {}
-        for i in range(1,20): layout[i] = []
+        
+        layout:list= []
         level = 0
         count = 0
         for i in infoSplit:
             if i[0:3] == 'At ':
-                layout[level].append(self.compileLayout(tText,tList,currentKey,nextLayout))
-                level = int(i[4])
+                layout.append(self.compileLayout(tText,tList,currentKey,nextLayout,level))
+                level = 1
                 nextLayout = 'Text'
                 tList = []
+                tText = i
 
-            elif i[0:6] == '------':
-                #table row
+            elif i[0:6] == '------':#table row
                 if infoSplit[count-2][0:6] != '------':
                     #new table
                     tText = tText.removesuffix(infoSplit[count-2])
-                    layout[level].append(self.compileLayout(tText,tList,currentKey,nextLayout))
+                    layout.append(self.compileLayout(tText,tList,currentKey,nextLayout,level))
                     #new stuff
-                    tText = infoSplit[count-2]
                     currentKey = infoSplit[count-2]
                     nextLayout = 'Table'
                     tList = []
+                    
                 else:
-                    rows += 1
-
-            
-
+                    pass
+            elif i.find('two simple weapons') != -1:
+                layout.append(self.compileLayout(tText,tList,currentKey,nextLayout,level))
+                tText = ''
+                tList = []
+                nextLayout = 'Text'
+                layout.append("sg.DropDown(%s,enable_events=True,readonly=True,key='sw1',s=(55,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B)" % str(self.simpleWeapons))
+                layout.append("sg.DropDown(%s,enable_events=True,readonly=True,key='sw2',s=(55,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B)" % str(self.simpleWeapons))
+            elif i != '' and infoSplit[count-1][0:6] == '------' and level == 0: #row text
+                s = i.split(' \t')
+                s.pop()
+                if s == []:
+                    s = i.split('\t') #try again
+                    s.pop()
+                tList.append(s)
+            elif i != '' and infoSplit[count-1][0:6] == '------':
+                tList.append(i)
+            else:
+                tText += i
+            tText +='\n'
             count +=1
-            pass
+        self.dh.saveClass({'Name':clas,'Info':info,'Layout':layout})
         return info
 
-    def compileLayout(self,t,list,key,layoutType):
+    def compileLayout(self,t:str,L:list,key,layoutType,level):
         if layoutType == 'Text':
-            return sg.Multiline(t,no_scrollbar=True,s=(80,20),key=key)
-        pass
+            return 'sg.Multiline(%s,no_scrollbar=True,auto_size_text=True,key=%s)' % (t.replace('\n','/n'),key)
+        if layoutType == 'Table' and level == 0:
+            return 'sg.Table(%s,%s,auto_size_columns=True,key=%s)' % (str(L),str(L[0]),key)
+        elif layoutType == 'Table':
+            return "sg.DropDown(%s,enable_events=True,readonly=True,s=(55,1),pad=(0,0),key=%s,text_color=%s,button_background_color=%s,background_color=%s)" % (str(L),key,str(C[0]),str(B),str(B))
+        
+    def checkForClassFile(self,clas:str) -> str:
+        try:
+            t = self.dh.loadClass(clas)
+            return t["Info"]
+        except:
+            return self.getClassinformation(clas)
+
+
 
     def removeEffects(self,dirtytext:str) ->str:
         c = 0

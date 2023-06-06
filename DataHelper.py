@@ -31,17 +31,18 @@ class dataHelper:
         return data
 
     def saveClass(self,data:dict):
-        try: Rfile = open('Races/'+data['Name']+'.class','x',encoding='utf-8')
-        except: Rfile = open('Races/'+data['Name']+'.class','w',encoding='utf-8')
+        try: Rfile = open('Classes/'+data['Name']+'.clas','x',encoding='utf-8')
+        except: Rfile = open('Classes/'+data['Name']+'.clas','w',encoding='utf-8')
         t:list[str] = [
             'Name: ' + data['Name'],
             'Info:\n' + data['Info'], #could be multiple lines
-            'Layout:\n' + data['Layout'] #could be multiple lines
+            'Layout:\n' + '\n'.join(data['Layout']) #could be multiple lines
         ]
         Rfile.writelines('\n'.join(t))
         Rfile.close()
+
     def loadClass(self,clas):
-        Rfile = open('Classes/'+clas+'.class','r',encoding='utf-8')
+        Rfile = open('Classes/'+clas+'.clas','r',encoding='utf-8')
         Rtxt = Rfile.readlines()
         data = {}
         data['Name'] = Rtxt[0].removeprefix('Name: ')
@@ -51,8 +52,8 @@ class dataHelper:
             if i == 'Layout:\n': lstart = c
             c += 1
 
-        data['Info'] = Rtxt[3:lstart]
-        data['Features'] = Rtxt[lstart+1:len(Rtxt)]
+        data['Info'] = ''.join(Rtxt[3:lstart])
+        data['Layout'] = Rtxt[lstart+1:len(Rtxt)]
         return data
 
     def saveSubclass(self,data:dict):
