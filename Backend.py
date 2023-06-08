@@ -4,7 +4,6 @@ import DataHelper as dh
 from requests.exceptions import ConnectionError
 import os
 
-
 C = sg.theme_button_color()
 B =  sg.theme_background_color()
 
@@ -170,7 +169,6 @@ class requester:
     
     def getClassinformation(self,clas:str):
         web = requests.get(self.source+'/'+clas)
-        #web = open('wididot.txt',encoding='utf-8').readlines()
         text = web.text.split('\n')
         areaOfIntrest = False
         rawInformation = []
@@ -244,8 +242,8 @@ class requester:
                 tText = ''
                 tList = []
                 nextLayout = 'Text'
-                layout.append("sg.DropDown(%s,enable_events=True,readonly=True,key='sw1',s=(55,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B)" % str(self.simpleWeapons))
-                layout.append("sg.DropDown(%s,enable_events=True,readonly=True,key='sw2',s=(55,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B)" % str(self.simpleWeapons))
+                layout.append("sg.DropDown('%s',enable_events=True,readonly=True,key='sw1',s=(35,1),pad=(0,0),text_color='283b5b',button_background_color='64778d',background_color='64778d')" % str(self.simpleWeapons).replace("'","***"))
+                layout.append("sg.DropDown('%s',enable_events=True,readonly=True,key='sw2',s=(35,1),pad=(0,0),text_color='283b5b',button_background_color='64778d',background_color='64778d')" % str(self.simpleWeapons).replace("'","***"))
             elif i != '' and infoSplit[count-1][0:6] == '------' and level == 0: #row text
                 s = i.split(' \t')
                 s.pop()
@@ -263,12 +261,13 @@ class requester:
         return info
 
     def compileLayout(self,t:str,L:list,key,layoutType,level):
+        key = key.replace("'","***")
         if layoutType == 'Text':
-            return 'sg.Multiline(%s,no_scrollbar=True,auto_size_text=True,key=%s)' % (t.replace('\n','/n'),key)
+            return "sg.Multiline('%s',no_scrollbar=True,auto_size_text=True,s=(150,5),key='%s')" % (t.replace('\n','/n').replace("'","***"),key)
         if layoutType == 'Table' and level == 0:
-            return 'sg.Table(%s,%s,auto_size_columns=True,key=%s)' % (str(L),str(L[0]),key)
+            return "sg.Table(%s,%s,auto_size_columns=True,key='%s')" % (str(L),str(L[0]),key)
         elif layoutType == 'Table':
-            return "sg.DropDown(%s,enable_events=True,readonly=True,s=(55,1),pad=(0,0),key=%s,text_color=%s,button_background_color=%s,background_color=%s)" % (str(L),key,str(C[0]),str(B),str(B))
+            return "sg.DropDown(%s,enable_events=True,readonly=True,s=(35,1),pad=(0,0),key='%s',text_color='283b5b',button_background_color='64778d',background_color='64778d')" % (str(L),key)
         
     def checkForClassFile(self,clas:str) -> str:
         try:
@@ -298,3 +297,22 @@ class requester:
             c += 1
         cleantext = cleantext.removeprefix("&nbsp;")
         return cleantext
+    
+    def loadLayout(self,clas):
+        d = self.dh.loadClass(clas)
+        layout = []
+        c = 'class t:\n def __init__(self) -> None:\n  pass\n def rL(self):\n  return layout' #injected class wrapper
+        code = 'import PySimpleGUI as sg\nlayout = [\n'+','.join(d['Layout'])+'\n]\n\n'+c
+        with open('temp.py','w',encoding='utf-8') as f: f.write(code) #this method of not the safect but it was the first one i thought of 
+        import temp
+        tcode = temp.t()
+        l = tcode.rL() #this works
+
+        #wipe temp.py 
+        os.remove('temp.py')
+        #correct some formating
+        for i in l:
+            if type(i) == sg.Multiline:
+                i.DefaultText = i.DefaultText.replace('/n','\n').replace("***","'")
+            layout.append([i])
+        return layout
