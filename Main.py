@@ -4,11 +4,11 @@ import Backend
 
 rq = Backend.requester()
 
+
 sg.theme('DarkAmber')   #dark theme
 # colors
 C = sg.theme_button_color()
-B =  sg.theme_background_color()
-
+B = sg.theme_background_color()
 #layouts
 top = [
     [sg.Button('My Characters', key='Characters', pad=(2,0),button_color = (C[1],B),border_width=0),      
@@ -126,7 +126,16 @@ while True:
         tempCharacter['level'] = int(values['level'])
         tempCharacter['class'] = values['classes']
         if values['classes'] != '':
-            classLayout = rq.loadLayout(values['classes'])
-            mainWindow = rq.swapWindow(mainWindow,classLayout)
+            classLayout = rq.loadLayout(values['classes'],values['level'])
+            classColumn = sg.Column(classLayout,scrollable=True,s=(1050,500))
+            t = [[classColumn],[[sg.Button("Submit",key="Confirm Class",s=(19,1),pad=(0,0),button_color = (C[1],B),border_width=0),sg.Button("Reload Class",key="Reload",s=(19,1),pad=(0,0),button_color = (C[1],B),border_width=0)]]]
+            mainWindow = rq.swapWindow(mainWindow,t)
+    
+    if event == 'Reload':
+        mainWindow.close()
+        classLayout = rq.loadLayout(tempCharacter['class'])
+        tc = sg.Column(classLayout,scrollable=True,s=(1050,500))
+        tt = [[tc],[[sg.Button("Submit",key="Confirm Class",s=(19,1),pad=(0,0),button_color = (C[1],B),border_width=0),sg.Button("Reload Class",key="Reload",s=(19,1),pad=(0,0),button_color = (C[1],B),border_width=0)]]]
+        mainWindow = sg.Window('Dev',tt)
 
 mainWindow.close()

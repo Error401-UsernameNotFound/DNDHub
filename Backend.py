@@ -215,12 +215,12 @@ class requester:
         tList = []
         
         layout:list= []
-        level = 0
+        level = '0'
         count = 0
         for i in infoSplit:
-            if i[0:3] == 'At ':
+            if i[0:3] == 'At ' or i[0:13] =='Beginning at ' or i[0:15] == 'When you reach ' or i[0:12] == 'Starting at ':
                 layout.append(self.compileLayout(tText,tList,currentKey,nextLayout,level))
-                level = 1
+                level = self.firstInt(i)
                 nextLayout = 'Text'
                 tList = []
                 tText = i
@@ -242,8 +242,8 @@ class requester:
                 tText = ''
                 tList = []
                 nextLayout = 'Text'
-                layout.append("sg.DropDown('%s',enable_events=True,readonly=True,key='sw1',s=(35,1),pad=(0,0),text_color='283b5b',button_background_color='64778d',background_color='64778d')" % str(self.simpleWeapons).replace("'","***"))
-                layout.append("sg.DropDown('%s',enable_events=True,readonly=True,key='sw2',s=(35,1),pad=(0,0),text_color='283b5b',button_background_color='64778d',background_color='64778d')" % str(self.simpleWeapons).replace("'","***"))
+                layout.append(level+"sg.DropDown(%s,enable_events=True,readonly=True,key='sw1',s=(35,1))" % str(self.simpleWeapons))
+                layout.append(level+"sg.DropDown(%s,enable_events=True,readonly=True,key='sw2',s=(35,1))" % str(self.simpleWeapons))
             elif i != '' and infoSplit[count-1][0:6] == '------' and level == 0: #row text
                 s = i.split(' \t')
                 s.pop()
@@ -263,11 +263,13 @@ class requester:
     def compileLayout(self,t:str,L:list,key,layoutType,level):
         key = key.replace("'","***")
         if layoutType == 'Text':
-            return "sg.Multiline('%s',no_scrollbar=True,auto_size_text=True,s=(150,5),key='%s')" % (t.replace('\n','/n').replace("'","***"),key)
+            t = t.replace('\n\n','\n')
+            return level+"sg.Multiline('%s',no_scrollbar=True,auto_size_text=True,s=(125,5),key='%s')" % (t.replace('\n','/n').replace("'","***"),key)
         if layoutType == 'Table' and level == 0:
-            return "sg.Table(%s,%s,auto_size_columns=True,key='%s')" % (str(L),str(L[0]),key)
+            t = L.pop(0)
+            return level+"sg.Table(%s,%s,key='%s',s=(200,300))" % (str(L),t,key)
         elif layoutType == 'Table':
-            return "sg.DropDown(%s,enable_events=True,readonly=True,s=(35,1),pad=(0,0),key='%s',text_color='283b5b',button_background_color='64778d',background_color='64778d')" % (str(L),key)
+            return level+"sg.DropDown(%s,enable_events=True,readonly=True,s=(35,1),key='%s')" % (str(L),key)
         
     def checkForClassFile(self,clas:str) -> str:
         try:
@@ -298,21 +300,44 @@ class requester:
         cleantext = cleantext.removeprefix("&nbsp;")
         return cleantext
     
-    def loadLayout(self,clas):
+    def loadLayout(self,clas,level):
         d = self.dh.loadClass(clas)
+        dout = d['Layout']
+        #make the dict?
+        dDic = {}
+        for i in dout:
+            i:str
+            lv = i[0:i.find('sg')]
+            try:
+                dDic[lv].append(i.removeprefix(lv))
+            except:
+                dDic[lv] = [i.removeprefix(lv)]
         layout = []
-        c = 'class t:\n def __init__(self) -> None:\n  pass\n def rL(self):\n  return layout' #injected class wrapper
-        code = 'import PySimpleGUI as sg\nlayout = [\n'+','.join(d['Layout'])+'\n]\n\n'+c
-        with open('temp.py','w',encoding='utf-8') as f: f.write(code) #this method of not the safect but it was the first one i thought of 
+        c = 'class t:\n def __init__(self) -> None:\n  pass\n def rL(self):\n  return layoutDict' #injected class wrapper
+        code = 'import PySimpleGUI as sg\nlayoutDict = '+str(dDic)+'\n\n'+c
+        with open('temp.py','w',encoding='utf-8') as f: f.write(code) 
         import temp
         tcode = temp.t()
-        l = tcode.rL() #this works
-
+        l:dict = tcode.rL() #this works
         #wipe temp.py 
         os.remove('temp.py')
+        firstPass = []
+        keys = l.keys()
+        for i in keys:
+            if int(i) <= int(lv):
+                firstPass += l[i]
         #correct some formating
-        for i in l:
+        for i in firstPass:
             if type(i) == sg.Multiline:
                 i.DefaultText = i.DefaultText.replace('/n','\n').replace("***","'")
             layout.append([i])
         return layout
+
+    def firstInt(self,string:str) -> str:
+        s = ''
+        for i in string:
+            if i.isnumeric():
+                s += i
+            elif s != '':
+                return s
+        return s
