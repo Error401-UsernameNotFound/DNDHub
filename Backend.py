@@ -13,7 +13,6 @@ class requester:
         self.dh = dh.dataHelper()
         self.infoDict = {}
         self.allSubraces = []
-        self.simpleWeapons = ['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear']
     def getRaces(self) -> list:
         races = []
         rawRaces = []
@@ -205,71 +204,10 @@ class requester:
                 info += self.removeEffects(i[3:len(i)]) + '\n\n'
             elif i[0:8] =='<strong>' or i[0:4] =='<li>':
                 info += self.removeEffects(i) + '\n'
-
-        #save the class generated here
-        #format into layout...
-        infoSplit:list[str] = info.split('\n')
-        nextLayout = 'Text'
-        tText = ''
-        currentKey = ''
-        tList = []
-        
-        layout:list= []
-        level = '0'
-        count = 0
-        for i in infoSplit:
-            if i[0:3] == 'At ' or i[0:13] =='Beginning at ' or i[0:15] == 'When you reach ' or i[0:12] == 'Starting at ':
-                layout.append(self.compileLayout(tText,tList,currentKey,nextLayout,level))
-                level = self.firstInt(i)
-                nextLayout = 'Text'
-                tList = []
-                tText = i
-
-            elif i[0:6] == '------':#table row
-                if infoSplit[count-2][0:6] != '------':
-                    #new table
-                    tText = tText.removesuffix(infoSplit[count-2])
-                    layout.append(self.compileLayout(tText,tList,currentKey,nextLayout,level))
-                    #new stuff
-                    currentKey = infoSplit[count-2]
-                    nextLayout = 'Table'
-                    tList = []
-                    
-                else:
-                    pass
-            elif i.find('two simple weapons') != -1:
-                layout.append(self.compileLayout(tText,tList,currentKey,nextLayout,level))
-                tText = ''
-                tList = []
-                nextLayout = 'Text'
-                layout.append(level+"sg.DropDown(%s,enable_events=True,readonly=True,key='sw1',s=(35,1))" % str(self.simpleWeapons))
-                layout.append(level+"sg.DropDown(%s,enable_events=True,readonly=True,key='sw2',s=(35,1))" % str(self.simpleWeapons))
-            elif i != '' and infoSplit[count-1][0:6] == '------' and level == 0: #row text
-                s = i.split(' \t')
-                s.pop()
-                if s == []:
-                    s = i.split('\t') #try again
-                    s.pop()
-                tList.append(s)
-            elif i != '' and infoSplit[count-1][0:6] == '------':
-                tList.append(i)
-            else:
-                tText += i
-            tText +='\n'
-            count +=1
-        self.dh.saveClass({'Name':clas,'Info':info,'Layout':layout})
+            self.dh.saveClass({'Name':clas,'Info':info})
         return info
 
-    def compileLayout(self,t:str,L:list,key,layoutType,level):
-        key = key.replace("'","***")
-        if layoutType == 'Text':
-            t = t.replace('\n\n','\n')
-            return level+"sg.Multiline('%s',no_scrollbar=True,auto_size_text=True,s=(125,5),key='%s')" % (t.replace('\n','/n').replace("'","***"),key)
-        if layoutType == 'Table' and level == 0:
-            t = L.pop(0)
-            return level+"sg.Table(%s,%s,key='%s',s=(200,300))" % (str(L),t,key)
-        elif layoutType == 'Table':
-            return level+"sg.DropDown(%s,enable_events=True,readonly=True,s=(35,1),key='%s')" % (str(L),key)
+    
         
     def checkForClassFile(self,clas:str) -> str:
         try:
@@ -299,39 +237,6 @@ class requester:
             c += 1
         cleantext = cleantext.removeprefix("&nbsp;")
         return cleantext
-    
-    def loadLayout(self,clas,level):
-        d = self.dh.loadClass(clas)
-        dout = d['Layout']
-        #make the dict?
-        dDic = {}
-        for i in dout:
-            i:str
-            lv = i[0:i.find('sg')]
-            try:
-                dDic[lv].append(i.removeprefix(lv))
-            except:
-                dDic[lv] = [i.removeprefix(lv)]
-        layout = []
-        c = 'class t:\n def __init__(self) -> None:\n  pass\n def rL(self):\n  return layoutDict' #injected class wrapper
-        code = 'import PySimpleGUI as sg\nlayoutDict = '+str(dDic)+'\n\n'+c
-        with open('temp.py','w',encoding='utf-8') as f: f.write(code) 
-        import temp
-        tcode = temp.t()
-        l:dict = tcode.rL() #this works
-        #wipe temp.py 
-        os.remove('temp.py')
-        firstPass = []
-        keys = l.keys()
-        for i in keys:
-            if int(i) <= int(lv):
-                firstPass += l[i]
-        #correct some formating
-        for i in firstPass:
-            if type(i) == sg.Multiline:
-                i.DefaultText = i.DefaultText.replace('/n','\n').replace("***","'")
-            layout.append([i])
-        return layout
 
     def firstInt(self,string:str) -> str:
         s = ''
