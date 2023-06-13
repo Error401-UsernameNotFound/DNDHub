@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-    <title>Viashino (UA) - DND 5th Edition</title>
+    <title>Artificer - DND 5th Edition</title>
     
     
     
@@ -20,14 +20,14 @@
         WIKIREQUEST.info.domain = "dnd5e.wikidot.com";
         WIKIREQUEST.info.siteId = 1475899;
         WIKIREQUEST.info.siteUnixName = "dnd5e";
-        WIKIREQUEST.info.categoryId = 40932043;
+        WIKIREQUEST.info.categoryId = 11887298;
         WIKIREQUEST.info.themeId = 2386862;
-        WIKIREQUEST.info.requestPageName = "lineage:viashino-ua";
-        OZONE.request.timestamp = 1685932847;
+        WIKIREQUEST.info.requestPageName = "artificer";
+        OZONE.request.timestamp = 1686673602;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'en';
-                WIKIREQUEST.info.pageUnixName = "lineage:viashino-ua";
-        WIKIREQUEST.info.pageId = 1331004175;
+                WIKIREQUEST.info.pageUnixName = "artificer";
+        WIKIREQUEST.info.pageId = 52403401;
                         WIKIREQUEST.info.lang = "en";
         OZONE.lang = "en";
         var isUAMobile = !!/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -367,7 +367,7 @@ body {
       <div class="main-content-wrap col-md-9">
       
         <div class="main-content">
-          <div class="page-title page-header"><span>Viashino (UA)</span></div>
+          <div class="page-title page-header"><span>Artificer</span></div>
           
           
         
@@ -392,35 +392,453 @@ window['nitroAds'].createAd('wad-dnd5e-above-content', {
 
 <div id="page-content">
 
-<p>Source: Unearthed Arcana 53 - Races of Ravnica</p>
-<p><em><strong>Many reptiles derive their body warmth and energy from the sun, but the humanoid viashino are fueled by an inner fire of zeal. Open with their emotions, viashino can be hot-tempered, but they are also quick to their hissing laughter, and they easily form close bonds of friendship. They are fierce warriors and passionate advocates for their guilds and causes.</strong></em></p>
+<p><strong><em>Masters of invention, artificers use ingenuity and magic to unlock extraordinary capabilities in objects. They see magic as a complex system waiting to be decoded and then harnessed in their spells and inventions. You can find everything you need to play one of these inventors in the next few sections.</em></strong></p>
+<p><strong><em>Artificers use a variety of tools to channel their arcane power. To cast a spell, an artificer might use alchemist's supplies to create a potent elixir, calligrapher's supplies to inscribe a sigil of power, or tinker's tools to craft a temporary charm. The magic of artificers is tied to their tools and their talents, and few other characters can produce the right tool for a job as well as an artificer.</em></strong></p>
+<p><em>You must have an Intelligence score of 13 or higher in order to multiclass in or out of this class.</em></p>
+<table class="wiki-content-table">
+<tr>
+<th colspan="4">The Artificer</th>
+<th colspan="8">Spell Slots per Spell Level</th>
+</tr>
+<tr>
+<th>Level</th>
+<th>Proficiency Bonus</th>
+<th>Features</th>
+<th>Infusions Known</th>
+<th>Infused Items</th>
+<th>Cantrips Known</th>
+<th>1st</th>
+<th>2nd</th>
+<th>3rd</th>
+<th>4th</th>
+<th>5th</th>
+</tr>
+<tr>
+<td>1st</td>
+<td>+2</td>
+<td>Magical Tinkering, Spellcasting</td>
+<td>-</td>
+<td>-</td>
+<td>2</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2nd</td>
+<td>+2</td>
+<td>Infuse Item</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3rd</td>
+<td>+2</td>
+<td>Artificer Specialist, The Right Tool for the Job</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4th</td>
+<td>+2</td>
+<td>Ability Score Improvement</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5th</td>
+<td>+3</td>
+<td>Artificer Specialist feature</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>6th</td>
+<td>+3</td>
+<td>Tool Expertise</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>7th</td>
+<td>+3</td>
+<td>Flash of Genius</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>8th</td>
+<td>+3</td>
+<td>Ability Score Improvement</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>9th</td>
+<td>+4</td>
+<td>Artificer Specialist feature</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>10th</td>
+<td>+4</td>
+<td>Magic Item Adept</td>
+<td>8</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11th</td>
+<td>+4</td>
+<td>Spell-Storing Item</td>
+<td>8</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12th</td>
+<td>+4</td>
+<td>Ability Score Improvement</td>
+<td>8</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>13th</td>
+<td>+5</td>
+<td>-</td>
+<td>8</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>14th</td>
+<td>+5</td>
+<td>Magic Item Savant</td>
+<td>10</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>15th</td>
+<td>+5</td>
+<td>Artificer Specialist feature</td>
+<td>10</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+</tr>
+<tr>
+<td>16th</td>
+<td>+5</td>
+<td>Ability Score Improvement</td>
+<td>10</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>-</td>
+</tr>
+<tr>
+<td>17th</td>
+<td>+6</td>
+<td>-</td>
+<td>10</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>18th</td>
+<td>+6</td>
+<td>Magic Item Master</td>
+<td>12</td>
+<td>6</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>19th</td>
+<td>+6</td>
+<td>Ability Score Improvement</td>
+<td>12</td>
+<td>6</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>20th</td>
+<td>+6</td>
+<td>Soul of Artifice</td>
+<td>12</td>
+<td>6</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</table>
+<div class="feature">
+<div class="row">
+<h1 id="toc0"><span>Class Features</span></h1>
+<div class="col-lg-12">
+<p>As an artificer, you gain the following class features.</p>
+<h5 id="toc1"><span>Hit Points</span></h5>
+<p><strong>Hit Dice:</strong> 1d8 per artificer level<br />
+<strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier<br />
+<strong>Hit Points at Higher Levels:</strong> 1d8 (or 5) + your Constitution modifier per artificer level after 1st</p>
+<h5 id="toc2"><span>Proficiencies</span></h5>
+<p><strong>Armor:</strong> Light armor, medium armor, shields<br />
+<strong>Weapons:</strong> Simple weapons<br />
+<strong>Tools:</strong> Thieves’ tools, tinker’s tools, one type of artisan’s tools of your choice<br />
+<strong>Saving Throws:</strong> Constitution, Intelligence<br />
+<strong>Skills:</strong> Choose two from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand</p>
+<h5 id="toc3"><span>Equipment</span></h5>
+<p>You start with the following equipment, in addition to the equipment granted by your background:</p>
 <ul>
-<li><strong>Ability Score Increase.</strong> Your Dexterity score increases by 2, and your Strength score increases by 1.</li>
+<li>any two simple weapons</li>
+<li>a light crossbow and 20 bolts</li>
+<li>(a) studded leather armor or (b) scale mail</li>
+<li>thieves’ tools and a dungeoneer’s pack</li>
+</ul>
+<p>Alternatively, you may start with 5d4x10 starting gold</p>
+<h5 id="toc4"><span>Optional Rule: Firearm Proficiency</span></h5>
+<p>The secrets of gunpowder weapons have been discovered in various corners of the D&amp;D multiverse. If your Dungeon Master uses the rules on firearms in the <em>Dungeon Master's Guide</em> and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them.</p>
+<h3 id="toc5"><span>Magical Tinkering</span></h3>
+<p>At 1st level, you've learned how to invest a spark of magic into mundane objects. To use this ability, you must have thieves' tools or artisan's tools in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:</p>
+<ul>
+<li>The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.</li>
 </ul>
 <ul>
-<li><strong>Age.</strong> Viashino mature quickly, reaching adulthood in their early teens. They live violent lives and rarely die of old age, but they would rarely live past 60 anyway.</li>
+<li>Whenever tapped by a creature, the object emits a recorded message that can be heard up to 10 feet away. You utter the message when you bestow this property on the object, and the recording can be no more than 6 seconds long.</li>
 </ul>
 <ul>
-<li><strong>Alignment.</strong> Viashino strongly tend toward chaotic alignments. They have no particular inclination toward good or evil.</li>
+<li>The object continuously emits your choice of an odor or a nonverbal sound (wind, waves, chirping, or the like). The chosen phenomenon is perceivable up to 10 feet away.</li>
 </ul>
 <ul>
-<li><strong>Size.</strong> Viashino are about as tall as humans, but they have lithe, wiry frames. Your size is Medium.</li>
+<li>A static visual effect appears on one of the object's surfaces. This effect can be a picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as you like.</li>
+</ul>
+<p>The chosen property lasts indefinitely. As an action, you can touch the object and end the property early.</p>
+<p>You can bestow magic on multiple objects, touching one object each time you use this feature, though a single object can only bear one property at a time. The maximum number of objects you can affect with this feature at one time is equal to your Intelligence modifier (minimum of one object). If you try to exceed your maximum, the oldest property immediately ends, and then the new property applies.</p>
+<h3 id="toc6"><span>Spellcasting</span></h3>
+<p>You've studied the workings of magic and how to cast spells, channeling the magic through objects. To observers, you don't appear to be casting spells in a conventional way; you appear to produce wonders from mundane items and outlandish inventions.</p>
+<h5 id="toc7"><span>Tools Required</span></h5>
+<p>You produce your artificer spell effects through your tools. You must have a spellcasting focus - specifically thieves' tools or some kind of artisan's tool - in hand when you cast any spell with this Spellcasting feature (meaning the spell has an &quot;M&quot; component when you cast it). You must be proficient with the tool to use it in this way. See the equipment chapter in the Player's Handbook for descriptions of these tools.</p>
+<p>After you gain the Infuse Item feature at 2nd level, you can also use any item bearing one of your infusions as a spellcasting focus.</p>
+<h5 id="toc8"><span>Cantrips (0-Level Spells)</span></h5>
+<p>At 1st level, you know two cantrips of your choice from the <a href="http://dnd5e.wikidot.com/spells:artificer">artificer spell list</a>. At higher levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips Known column of the Artificer table.</p>
+<p>When you gain a level in this class, you can replace one of the artificer cantrips you know with another cantrip from the <a href="http://dnd5e.wikidot.com/spells:artificer">artificer spell list</a>.</p>
+<h5 id="toc9"><span>Preparing and Casting Spells</span></h5>
+<p>The Artificer table shows how many spell slots you have to cast your artificer spells. To cast one of your artificer spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.</p>
+<p>You prepare the list of artificer spells that are available for you to cast, choosing from the <a href="http://dnd5e.wikidot.com/spells:artificer">artificer spell list</a>. When you do so, choose a number of artificer spells equal to your Intelligence modifier + half your artificer level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.</p>
+<p>For example, if you are a 5th-level artificer, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell <a href="/spell:cure-wounds">Cure Wounds</a>, you can cast it using a lst-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.</p>
+<p>You can change your list of prepared spells when you finish a long rest. Preparing a new list of artificer spells requires time spent tinkering with your spellcasting focuses: at least 1 minute per spell level for each spell on your list.</p>
+<h5 id="toc10"><span>Spellcasting Ability</span></h5>
+<p>Intelligence is your spellcasting ability for your artificer spells; your understanding of the theory behind magic allows you to wield these spells with superior skill. You use your Intelligence whenever an artificer spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for an artificer spell you cast and when making an attack roll with one.</p>
+<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Intelligence modifier</p>
+<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Intelligence modifier</p>
+<h5 id="toc11"><span>Ritual Casting</span></h5>
+<p>You can cast an artificer spell as a ritual if that spell has the ritual tag and you have the spell prepared.</p>
+<h3 id="toc12"><span>Infuse Item</span></h3>
+<p>At 2nd level, you've gained the ability to imbue mundane items with certain magical infusions, turning those objects into magic items.</p>
+<h5 id="toc13"><span>Infusions Known</span></h5>
+<p>When you gain this feature, pick four <a href="http://dnd5e.wikidot.com/artificer:infusions">artificer infusions</a> to learn. You learn additional infusions of your choice when you reach certain levels in this class, as shown in the Infusions Known column of the Artificer table.</p>
+<p>Whenever you gain a level in this class, you can replace one of the artificer infusions you learned with a new one.</p>
+<h5 id="toc14"><span>Infusing an Item</span></h5>
+<p>Whenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's description. If the item requires attunement, you can attune yourself to it the instant you infuse the item. If you decide to attune to the item later, you must do so using the normal process for attunement (see the attunement rules in the <em>Dungeon Master's Guide</em>).</p>
+<p>Your infusion remains in an item indefinitely, but when you die, the infusion vanishes after a number of days equal to your Intelligence modifier (minimum of 1 day). The infusion also vanishes if you replace your knowledge of the infusion.</p>
+<p>You can infuse more than one nonmagical object at the end of a long rest; the maximum number of objects appears in the Infused Items column of the Artificer table. You must touch each of the objects, and each of your infusions can be in only one object at a time. Moreover, no object can bear more than one of your infusions at a time. If you try to exceed your maximum number of infusions, the oldest infusion ends, and then the new infusion applies.</p>
+<p>If an infusion ends on an item that contains other things, like a bag of holding, its contents harmlessly appear in and around its space.</p>
+<h3 id="toc15"><span>Artificer Specialist</span></h3>
+<p>At 3rd level, you choose the type of specialist you are. Your choice grants you features at 5th level and again at 9th and 15th level.</p>
+<table class="wiki-content-table">
+<tr>
+<th>Specialty</th>
+<th>Source</th>
+</tr>
+<tr>
+<td><a href="http://dnd5e.wikidot.com/artificer:alchemist">Alchemist</a></td>
+<td>Tasha's Cauldron of Everything<br />
+Eberron: Rising from the Last War</td>
+</tr>
+<tr>
+<td><a href="http://dnd5e.wikidot.com/artificer:armorer">Armorer</a></td>
+<td>Tasha's Cauldron of Everything</td>
+</tr>
+<tr>
+<td><a href="http://dnd5e.wikidot.com/artificer:artillerist">Artillerist</a></td>
+<td>Tasha's Cauldron of Everything<br />
+Eberron: Rising from the Last War</td>
+</tr>
+<tr>
+<td><a href="http://dnd5e.wikidot.com/artificer:battle-smith">Battle Smith</a></td>
+<td>Tasha's Cauldron of Everything<br />
+Eberron: Rising from the Last War</td>
+</tr>
+<tr>
+<th colspan="2">The following domains are unofficial content developed by Eberron writer Keith Baker and released on the Dungeon Master's Guild</th>
+</tr>
+<tr>
+<td><a href="http://dnd5e.wikidot.com/artificer:forge-adept">Forge Adept</a></td>
+<td>Exploring Eberron</td>
+</tr>
+<tr>
+<td><a href="/artificer:mastermaker">Mastermaker</a></td>
+<td>Dread Metrol</td>
+</tr>
+<tr>
+<td><a href="http://dnd5e.wikidot.com/artificer:maverick">Maverick</a></td>
+<td>Exploring Eberron</td>
+</tr>
+<tr>
+<th colspan="2">Archived Unearthed Arcana</th>
+</tr>
+<tr>
+<td><a href="http://dnd5e.wikidot.com/artificer:archivist-ua">Archivist</a></td>
+<td><a href="https://media.wizards.com/2019/dnd/downloads/UA-Artificer2-2019.pdf">Unearthed Arcana 58 - Artificer</a></td>
+</tr>
+<tr>
+<td><a href="http://dnd5e.wikidot.com/artificer:armorer-ua">Armorer</a></td>
+<td><a href="https://media.wizards.com/2020/dnd/downloads/UA2020-Subclasses03_0224.pdf">Unearthed Arcana 69 - Subclasses, Part 3</a></td>
+</tr>
+</table>
+<h3 id="toc16"><span>The Right Tool for the Job</span></h3>
+<p>At 3rd level, you've learned how to produce exactly the tool you need: with thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.</p>
+<h3 id="toc17"><span>Ability Score Improvement</span></h3>
+<p>When you reach 4th level, 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.</p>
+<h3 id="toc18"><span>Tool Expertise</span></h3>
+<p>At 6th level, your proficiency bonus is now doubled for any ability check you make that uses your proficiency with a tool.</p>
+<h3 id="toc19"><span>Flash of Genius</span></h3>
+<p>At 7th level, you've gained the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.</p>
+<p>You can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest.</p>
+<h3 id="toc20"><span>Magic Item Adept</span></h3>
+<p>When you reach 10th level, you achieve a profound understanding of how to use and make magic items:</p>
+<ul>
+<li>You can attune to up to four magic items at once.</li>
 </ul>
 <ul>
-<li><strong>Speed.</strong> Your base walking speed is 30 feet.</li>
+<li>If you craft a magic item with a rarity of common or uncommon, it takes you a quarter of the normal time, and it costs you half as much of the usual gold.</li>
+</ul>
+<h3 id="toc21"><span>Spell-Storing Item</span></h3>
+<p>At 11th level, you can now store a spell in an object. Whenever you finish a long rest, you can touch one simple or martial weapon or one item that you can use as a spellcasting focus, and you store a spell in it, choosing a 1st- or 2nd-level spell from the <a href="http://dnd5e.wikidot.com/spells:artificer">artificer spell list</a> that requires 1 action to cast (you needn't have it prepared).</p>
+<p>While holding the object, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier. If the spell requires concentration, the creature must concentrate. The spell stays in the object until it's been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again to store a spell in an object.</p>
+<h3 id="toc22"><span>Magic Item Savant</span></h3>
+<p>At 14th level, your skill with magic items deepens more:</p>
+<ul>
+<li>You can attune to up to five magic items at once.</li>
 </ul>
 <ul>
-<li><strong>Bite.</strong> Your fanged maw is a natural weapon, which you can use to make unarmed strikes. If you hit with it, you deal piercing damage equal to 1d4+ your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.</li>
+<li>You ignore all class, race, spell and level requirements on attuning to or using a magic item.</li>
+</ul>
+<h3 id="toc23"><span>Magic Item Master</span></h3>
+<p>Starting at 18th level, you can attune up to six magic items at once.</p>
+<h3 id="toc24"><span>Soul of Artifice</span></h3>
+<p>At 20th level, you develop a mystical connection to your magic items, which you can draw on for protection:</p>
+<ul>
+<li>You gain a +1 bonus to all saving throws per magic item you are currently attuned to.</li>
 </ul>
 <ul>
-<li><strong>Lashing Tail.</strong> Your semi-prehensile tail is tipped with a bony blade. Immediately after a creature within 5 feet of you deals damage to you with a melee attack, you can use your reaction to make an unarmed strike against that creature with your tail. If you hit, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.</li>
+<li>If you're reduced to 0 hit points but not killed out-right, you can use your reaction to end one of your artificer infusions, causing you to drop to 1 hit point instead of 0.</li>
 </ul>
-<ul>
-<li><strong>Wiry Frame.</strong> You gain proficiency in the Acrobatics or the Stealth skill (your choice).</li>
-</ul>
-<ul>
-<li><strong>Languages.</strong> You can speak, read, and write Common and Draconic.</li>
-</ul>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -486,45 +904,45 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://themes.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/themes.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://malkavian.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/malkavian.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://themes.wikidot.com">Wikidot Themes</a></h3>
+            <h3><a target="_blank" href="http://malkavian.wikidot.com">CCS Related</a></h3>
             <div class="desc">          
-              share your Wikidot theme with others!
+              Malkavian guide to CCS life
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://backrooms-survivor-governor.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/backrooms-survivor-governor.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://schoolsteachersparents.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/schoolsteachersparents.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://backrooms-survivor-governor.wikidot.com">后室幸存者总督</a></h3>
+            <h3><a target="_blank" href="http://schoolsteachersparents.wikidot.com">Schools - Teachers - Parents</a></h3>
             <div class="desc">          
-              一切皆有可能
+              Issues in Schooling
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://rscsandbox.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/rscsandbox.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://backrooms-f.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/backrooms-f.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://rscsandbox.wikidot.com">RSC Sandbox</a></h3>
+            <h3><a target="_blank" href="http://backrooms-f.wikidot.com">Backrooms F层级群-同人创作</a></h3>
             <div class="desc">          
-              RSC için Sandbox
+              火速來dv主頁！！！
             </div>
           </div>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://kannadanudi.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/kannadanudi.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://scp-pl.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/scp-pl.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://kannadanudi.wikidot.com">ಕನ್ನಡನುಡಿ</a></h3>
+            <h3><a target="_blank" href="http://scp-pl.wikidot.com">Fundacja SCP</a></h3>
             <div class="desc">          
-              ಕನ್ನಡ ಸಾಹಿತ್ಯಾಸಕ್ತರ ಕೂಟ
+              Polska Filia SCP
             </div>
           </div>
         </div>

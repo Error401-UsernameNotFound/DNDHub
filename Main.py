@@ -39,21 +39,21 @@ creationMenu = [
     [sg.Checkbox("Optional Class Features",key="OF")],
     [sg.Checkbox("Customize Your Origin",key="CO")],
     [sg.Text('Hit Point Type',pad=(4,4),font=(sg.DEFAULT_FONT[0],15))],
-    [sg.DropDown(["Fixed","Manual"],s=(15,2),readonly=True,text_color=C[1],button_background_color=B,background_color=B,key="HPT",default_value="Fixed")],
+    [sg.DropDown(["Fixed","Manual"],s=(15,2),readonly=True,key="HPT",default_value="Fixed")],
     [sg.Text('Use Prerequisites',pad=(4,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Checkbox("Feats",key="FP")],
     [sg.Checkbox("Multiclass Requirements",key="MR")],
     [sg.Text('Show Level-Scaled Spells',pad=(4,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Checkbox("Display and highlight available spells to cast with higher level spell slots",key="HLSS")],
     [sg.Text('Ability Score/Modifier Display',pad=(4,4),font=(sg.DEFAULT_FONT[0],15))],
-    [sg.DropDown(["Modifiers Top","Scores Top"],s=(15,2),readonly=True,text_color=C[1],button_background_color=B,background_color=B,key="ASD",default_value="Modifiers Top")],
+    [sg.DropDown(["Modifiers Top","Scores Top"],s=(15,2),readonly=True,key="ASD",default_value="Modifiers Top")],
     [sg.Button("Submit",key="Submit Preferences",s=(60,1),button_color = (C[1],B),border_width=0)]
 ]
 
 
 classes = ['Artificer','Barbarian','Bard','Blood-Hunter','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard']
 classesMenu = [
-    [sg.Text('Choose a Class',s=(45,1),font=(sg.DEFAULT_FONT[0],20)),sg.DropDown(classes,enable_events=True,readonly=True,key='classes',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B),sg.Text('level',s=(8,1),pad=(0,0)),sg.DropDown(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20',],'1',enable_events=True,readonly=True,key='level',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B,button_arrow_color=C[0])],
+    [sg.Text('Choose a Class',s=(45,1),font=(sg.DEFAULT_FONT[0],20)),sg.DropDown(classes,enable_events=True,readonly=True,key='classes',s=(15,1),pad=(0,0),text_color=C[1],button_background_color=B,background_color=B),sg.Text('level',s=(8,1),pad=(0,0)),sg.DropDown(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20',],'1',enable_events=True,readonly=True,key='level',s=(15,1),pad=(0,0),button_arrow_color=C[0])],
     [sg.Multiline('',no_scrollbar=True,s=(150,30),key='info')],
     [sg.Button("Submit",key="Submit Class",s=(130,1),button_color = (C[1],B),border_width=0)]
 ]
@@ -62,7 +62,7 @@ classesMenu = [
 simpleWeapons = ['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear']
 artisanTools = ["Alchemist's supplies","Brewer's supplies","Calligrapher's supplies","Carpenter's tools","Cartographer's tools","Cobbler's tools","Cook's utensils","Glassblower's tools","Jeweler's tools","Leatherworker's tools","Mason's tools","Painter's supplies","Potter's tools","Smith's tools","Tinker's tools","Weaver's tools","Woodcarver's tools"]
 ArtificerSpecialist = ['Alchemist','Armorer','Artillerist','Battle Smith','Forge Adept','Mastermaker','Maverick','Archivist-ua','Armorer-ua']
-Asi = ['Strength','Dexterity','Constitution','intellegence','Wisdom','Charisma']
+Asi = ['Strength','Dexterity','Constitution','Intellegence','Wisdom','Charisma']
 #hardcoded Classes
 ArtificerLayout = [
     [sg.Text('Artificer',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],20))],
@@ -74,20 +74,20 @@ ArtificerLayout = [
     [sg.Text('Armor: Light armor, medium armor, shields',pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
     [sg.Text('Weapons: Simple weapons',pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
     [sg.Text('Tools: Thieves’ tools, tinker’s tools, one type of artisan’s tools of your choice',pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
-    [sg.DropDown(artisanTools,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=artisanTools[0])],
+    [sg.DropDown(artisanTools,s=(25,10),readonly=True,default_value=artisanTools[0])],
     [sg.Text('Saving Throws: Constitution, Intelligence',pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
     [sg.Text('Skills: Choose two from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand',pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
-    [sg.DropDown(['Arcana', 'History', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Sleight of Hand'],s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value='Arcana')],
-    [sg.DropDown(['Arcana', 'History', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Sleight of Hand'],s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value='Arcana')],
+    [sg.DropDown(['Arcana', 'History', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Sleight of Hand'],s=(25,10),readonly=True,default_value='Arcana')],
+    [sg.DropDown(['Arcana', 'History', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Sleight of Hand'],s=(25,10),readonly=True,default_value='Arcana')],
     [sg.Text('Equipment',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('You start with the following equipment, in addition to the equipment granted by your background:',pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
     [sg.Text('\tany two simple weapons',pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
     [sg.Text('\ta light crossbow and 20 bolts',pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
     [sg.Text('\t(a) studded leather armor or (b) scale mail',pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
     [sg.Text('\tthieves’ tools and a dungeoneer’s pack',pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
-    [sg.DropDown(simpleWeapons,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=simpleWeapons[0])],
-    [sg.DropDown(simpleWeapons,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=simpleWeapons[0])],
-    [sg.DropDown(['Studded leather','Scale mail'],s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value='Studded leather')],
+    [sg.DropDown(['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear'],s=(25,10),readonly=True,default_value='Club')],
+    [sg.DropDown(['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear'],s=(25,10),readonly=True,default_value='Club')],
+    [sg.DropDown(['Studded leather','Scale mail'],s=(25,10),readonly=True,default_value='Studded leather')],
     #end of level 0,
     [sg.Text('Level 1',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Multiline("You've learned how to invest a spark of magic into mundane objects.To use this ability, you must have thieves' tools or artisan's tools in hand.You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",s=(80,5),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),disabled=True,background_color='#2c2825',no_scrollbar=True,border_width=0)],
@@ -113,14 +113,14 @@ ArtificerLayout = [
     [sg.Text('Level 3',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('Artificer Specialist',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Multiline("At 3rd level, you choose the type of specialist you are. Your choice grants you features at 5th level and again at 9th and 15th level.",s=(80,2),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),disabled=True,background_color='#2c2825',no_scrollbar=True,border_width=0)],
-    [sg.DropDown(ArtificerSpecialist,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value='')],
+    [sg.DropDown(ArtificerSpecialist,s=(25,10),readonly=True,default_value='')],
     [sg.Text('The Right Tool for the Job',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Multiline("At 3rd level, you've learned how to produce exactly the tool you need: with thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.",s=(80,5),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),disabled=True,background_color='#2c2825',no_scrollbar=True,border_width=0)],
     #end of level 3,
-    [sg.Text('Level 4',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
-    [sg.Text('Ability Score Improvement',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
-    [sg.DropDown(Asi,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=Asi[0])],
-    [sg.DropDown(Asi,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=Asi[0])],
+    [sg.Text('Level 4',s=(45,1),pad=(0,4),font=('Helvetica',15))],
+    [sg.Text('Ability Score Improvement',s=(45,1),pad=(0,4),font=('Helvetica',15))],
+    [sg.DropDown(['Strength','Dexterity','Constitution','Intellegence','Wisdom','Charisma'],s=(25,10),readonly=True,default_value='Strength')],
+    [sg.DropDown(['Strength','Dexterity','Constitution','Intellegence','Wisdom','Charisma'],s=(25,10),readonly=True,default_value='Strength')],
     #end of level 4,
     [sg.Text('Level 5',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('Subclass Feature',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
@@ -136,8 +136,8 @@ ArtificerLayout = [
     #end of level 7,
     [sg.Text('Level 8',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('Ability Score Improvement',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
-    [sg.DropDown(Asi,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=Asi[0])],
-    [sg.DropDown(Asi,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=Asi[0])],
+    [sg.DropDown(Asi,s=(25,10),readonly=True,default_value=Asi[0])],
+    [sg.DropDown(Asi,s=(25,10),readonly=True,default_value=Asi[0])],
     #end of level 8,
     [sg.Text('Level 9',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('Subclass Feature',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
@@ -155,8 +155,8 @@ ArtificerLayout = [
     #end of level 11,
     [sg.Text('Level 12',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('Ability Score Improvement',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
-    [sg.DropDown(Asi,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=Asi[0])],
-    [sg.DropDown(Asi,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=Asi[0])],
+    [sg.DropDown(Asi,s=(25,10),readonly=True,default_value=Asi[0])],
+    [sg.DropDown(Asi,s=(25,10),readonly=True,default_value=Asi[0])],
     #end of level 12,
     [sg.Text('Level 14',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('Magic Item Savant',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
@@ -170,8 +170,8 @@ ArtificerLayout = [
     #end of level 15,
     [sg.Text('Level 16',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('Ability Score Improvement',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
-    [sg.DropDown(Asi,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=Asi[0])],
-    [sg.DropDown(Asi,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=Asi[0])],
+    [sg.DropDown(Asi,s=(25,10),readonly=True,default_value=Asi[0])],
+    [sg.DropDown(Asi,s=(25,10),readonly=True,default_value=Asi[0])],
     #end of level 16,
     [sg.Text('Level 18',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('Magic Item Master',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
@@ -179,8 +179,8 @@ ArtificerLayout = [
     #end of level 18,
     [sg.Text('Level 19',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('Ability Score Improvement',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
-    [sg.DropDown(Asi,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=Asi[0])],
-    [sg.DropDown(Asi,s=(25,10),readonly=True,text_color=C[1],button_background_color=B,background_color=B,default_value=Asi[0])],
+    [sg.DropDown(Asi,s=(25,10),readonly=True,default_value=Asi[0])],
+    [sg.DropDown(Asi,s=(25,10),readonly=True,default_value=Asi[0])],
     #end of level 19,
     [sg.Text('Level 20',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
     [sg.Text('Soul of Artifice',s=(45,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],
@@ -192,7 +192,21 @@ ArtificerLayout = [
 #***************Debug***********
 dWindow = sg.Window('Debug',[[sg.Column(ArtificerLayout,scrollable=True,s=(700,600))]])
 
+sg.Text('Level 4',s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text('Ability Score Improvement',s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.DropDown(['Strength','Dexterity','Constitution','Intellegence','Wisdom','Charisma'],s=(25,10),readonly=True,default_value='Strength')
+sg.DropDown(['Strength','Dexterity','Constitution','Intellegence','Wisdom','Charisma'],s=(25,10),readonly=True,default_value='Strength')
 
+sg.Text('Level 5',s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text('Subclass Feature',s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Multiline("And its rather lengthy description",s=(80,5),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='#2c2825',no_scrollbar=True,border_width=0)
+
+sg.DropDown(['Arcana', 'History', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Sleight of Hand'],s=(25,10),readonly=True,default_value='Arcana')
+sg.DropDown(['Arcana', 'History', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Sleight of Hand'],s=(25,10),readonly=True,default_value='Arcana')
+
+sg.DropDown(['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear'],s=(25,10),readonly=True,default_value='Club')
+sg.DropDown(['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear'],s=(25,10),readonly=True,default_value='Club')
+sg.DropDown(['Studded leather','Scale mail'],s=(25,10),readonly=True,default_value='Studded leather')
 # Create the main window
 mainWindow = sg.Window('D&DHub', startlayout)
 
@@ -204,7 +218,7 @@ subraceList = []
 currentRace = ''
 
 while True:
-    event, values = dWindow.read()
+    event, values = mainWindow.read()
     if event == sg.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
         break
     if event == "Characters" and state != 0:
@@ -262,7 +276,7 @@ while True:
         tempCharacter['class'] = values['classes']
         if values['classes'] != '':
             classLayout = rq.loadLayout(values['classes'],values['level'])
-            classColumn = sg.Column(classLayout,scrollable=True,s=(1050,500))
+            classColumn = sg.Column(classLayout,scrollable=True,s=(700,600))
             t = [[classColumn],[[sg.Button("Submit",key="Confirm Class",s=(19,1),pad=(0,0),button_color = (C[1],B),border_width=0),sg.Button("Reload Class",key="Reload",s=(19,1),pad=(0,0),button_color = (C[1],B),border_width=0)]]]
             mainWindow = rq.swapWindow(mainWindow,t)
     
