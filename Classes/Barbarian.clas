@@ -1,0 +1,250 @@
+Name: Barbarian
+Info:
+For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of strength.
+
+You must have a Strength score of 13 or higher in order to multiclass in or out of this class.
+
+
+
+
+
+
+The Barbarian
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Level	Proficiency Bonus	Features	Rages	Rage Damage	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1st 	+2 	Rage, Unarmored Defense 	2 	+2 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2nd 	+2 	Reckless Attack, Danger Sense 	2 	+2 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3rd 	+2 	Primal Path, Primal Knowledge (Optional) 	3 	+2 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4th 	+2 	Ability Score Improvement 	3 	+2 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5th 	+3 	Extra Attack, Fast Movement 	3 	+2 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6th 	+3 	Path feature 	4 	+2 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7th 	+3 	Feral Instinct, Instinctive Pounce (Optional) 	4 	+2 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8th 	+3 	Ability Score Improvement 	4 	+2 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9th 	+4 	Brutal Critical (1 die) 	4 	+3 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10th 	+4 	Path feature, Primal Knowledge (Optional) 	4 	+3 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11th 	+4 	Relentless Rage 	4 	+3 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12th 	+4 	Ability Score Improvement 	5 	+3 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13th 	+5 	Brutal Critical (2 dice) 	5 	+3 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14th 	+5 	Path feature 	5 	+3 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+15th 	+5 	Persistent Rage 	5 	+3 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+16th 	+5 	Ability Score Improvement 	5 	+4 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17th 	+6 	Brutal Critical (3 dice) 	6 	+4 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+18th 	+6 	Indomitable Might 	6 	+4 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+19th 	+6 	Ability Score Improvement 	6 	+4 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+20th 	+6 	Primal Champion 	Unlimited 	+4 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+As a barbarian, you gain the following class features.
+
+Hit Dice: 1d12 per barbarian level
+
+Hit Points at 1st Level: 12 + your Constitution modifier
+Hit Points at Higher Levels: 1d12 (or 7) + your Constitution modifier per barbarian level after 1st
+Armor: Light armor, medium armor, shields
+
+Weapons: Simple weapons, martial weapons
+Tools: None
+Saving Throws: Strength, Constitution
+Skills: Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival
+You start with the following equipment, in addition to the equipment granted by your background:
+
+(a) a greataxe or (b) any martial melee weapon
+(a) two handaxes or (b) any simple weapon
+An explorer's pack and four javelins
+In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.
+
+While raging, you gain the following benefits if you aren't wearing heavy armor:
+
+You have advantage on Strength checks and Strength saving throws.
+When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.
+You have resistance to bludgeoning, piercing, and slashing damage.
+If you are able to cast spells, you can't cast them or concentrate on them while raging.
+
+Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.
+
+Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.
+
+While you are not wearing any armor, your armor class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.
+
+At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be blinded, deafened, or incapacitated.
+
+Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.
+
+At 3rd level, you choose a path that shapes the nature of your rage. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.
+
+
+
+Path	Source	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ancestral Guardian 	Xanathar's Guide to Everything 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Battlerager 	Sword Coast Adventurer's Guide 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Beast 	Tasha's Cauldron of Everything 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Berserker 	Player's Handbook 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Storm Herald 	Xanathar's Guide to Everything 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Totem Warrior 	Player's Handbook 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Wild Magic 	Tasha's Cauldron of Everything 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Zealot 	Xanathar's Guide to Everything 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Unearthed Arcana
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Giant 	Unearthed Arcana 83 - Giant Options 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+D&D Beyond Partnered Content
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Depths 	Legends of Runeterra: Dark Tides of Bilgewater 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+The following subclass is unofficial homebrew created by WOTC affiliated DM, Matthew Mercer
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Juggernaut 	Tal'Dorei Campaign Guide 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Archived Unearthed Arcana
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Beast 	Unearthed Arcana 67 - Subclasses, Part 1 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Wild Soul 	Unearthed Arcana 60 - Barbarian and Monk 	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+When you reach 3rd level and again at 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.
+
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.
+
+Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.
+
+Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor.
+
+By 7th level, your instincts are so honed that you have advantage on initiative rolls.
+
+Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.
+
+At 7th level, as part of the bonus action you take to enter your rage, you can move up to half your speed.
+
+Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.
+
+This increases to two additional dice at 13th level and three additional dice at 17th level.
+
+Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.
+
+Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.
+
+Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.
+
+Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.
+
+At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.
+
+
+Layout:
+sg.Text("Barbarian",s=(45,1),pad=(0,4),font=('Helvetica',20))
+sg.Text("Hit Points",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Hit Dice: 1d12 per barbarian level",pad=(0,0),font=('Helvetica',10))
+sg.Text("Hit Points at 1st Level: 12 + your Constitution modifier",pad=(0,0),font=('Helvetica',10))
+sg.Text("Hit Points at Higher Levels: 1d12 (or 7) + your Constitution modifier per barbarian level after 1st",pad=(0,0),font=('Helvetica',10))
+sg.Text("Proficiencies",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Armor: Light armor, medium armor, shields",pad=(0,0),font=('Helvetica',10))
+sg.Text("Weapons: Simple weapons, martial weapons",pad=(0,0),font=('Helvetica',10))
+sg.Text("Tools: None",pad=(0,0),font=('Helvetica',10))
+sg.Text("Saving Throws: Strength, Constitution",pad=(0,0),font=('Helvetica',10))
+sg.Text("Skills: Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival",pad=(0,0),font=('Helvetica',10))
+sg.DropDown([' Animal Handling', ' Athletics', ' Intimidation', ' Nature', ' Perception', ' Survival'],s=(25,10),readonly=True,default_value='')
+sg.DropDown([' Animal Handling', ' Athletics', ' Intimidation', ' Nature', ' Perception', ' Survival'],s=(25,10),readonly=True,default_value='')
+sg.Text("Equipment",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("You start with the following equipment, in addition to the equipment granted by your background:",pad=(0,0),font=('Helvetica',10))
+sg.Text("	- (a) a greataxe or (b) any martial melee weapon",pad=(0,0),font=('Helvetica',10))
+sg.Text("	- (a) two handaxes or (b) any simple weapon",pad=(0,0),font=('Helvetica',10))
+sg.Text("	- An explorer's pack and four javelins",pad=(0,0),font=('Helvetica',10))
+sg.Text("Level 1",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Rage",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.",pad=(0,0),font=('Helvetica',10))
+sg.Text("While raging, you gain the following benefits if you aren't wearing heavy armor:",pad=(0,0),font=('Helvetica',10))
+sg.Text("	- You have advantage on Strength checks and Strength saving throws.",pad=(0,0),font=('Helvetica',10))
+sg.Multiline("- When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.",s=(80,3),pad=(60,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Text("	- You have resistance to bludgeoning, piercing, and slashing damage.",pad=(0,0),font=('Helvetica',10))
+sg.Text("If you are able to cast spells, you can't cast them or concentrate on them while raging.",pad=(0,0),font=('Helvetica',10))
+sg.Multiline("Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.",s=(80,3),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Multiline("Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.",s=(80,2),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Text("Unarmored Defense",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Multiline("While you are not wearing any armor, your armor class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.",s=(80,2),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Text("Level 2",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Danger Sense",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Multiline("At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be blinded, deafened, or incapacitated.",s=(80,4),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Text("Reckless Attack",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Multiline("Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",s=(80,4),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Text("Level 3",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Primal Path",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Multiline("At 3rd level, you choose a path that shapes the nature of your rage. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",s=(80,2),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.DropDown(['Ancestral Guardian', 'Battlerager', 'Beast', 'Berserker', 'Storm Herald', 'Totem Warrior', 'Wild Magic', 'Zealot', 'Giant-ua', 'Depths-ua', 'Legends of Runeterra: Dark Tides of Bilgewater-ua', 'Juggernaut-ua', 'Beast-ua', 'Wild Soul-ua'],s=(25,10),readonly=True,default_value='')
+sg.Multiline("When you reach 3rd level and again at 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.",s=(80,2),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Text("Level 5",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Extra Attack",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",pad=(0,0),font=('Helvetica',10))
+sg.Text("Fast Movement",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor.",pad=(0,0),font=('Helvetica',10))
+sg.Text("Level 7",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Feral Instinct",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("By 7th level, your instincts are so honed that you have advantage on initiative rolls.",pad=(0,0),font=('Helvetica',10))
+sg.Multiline("Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.",s=(80,3),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Text("Instinctive Pounce (Optional)",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("At 7th level, as part of the bonus action you take to enter your rage, you can move up to half your speed.",pad=(0,0),font=('Helvetica',10))
+sg.Text("Level 9",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Brutal Critical",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Multiline("Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.",s=(80,2),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Text("This increases to two additional dice at 13th level and three additional dice at 17th level.",pad=(0,0),font=('Helvetica',10))
+sg.Text("Level 11",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Relentless Rage",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Multiline("Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",s=(80,3),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Text("Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.",pad=(0,0),font=('Helvetica',10))
+sg.Text("Level 15",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Persistent Rage",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.",pad=(0,0),font=('Helvetica',10))
+sg.Text("Level 18",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Indomitable Might",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Multiline("Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",s=(80,2),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)
+sg.Text("Level 20",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Text("Primal Champion",s=(45,1),pad=(0,4),font=('Helvetica',15))
+sg.Multiline("At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.",s=(80,2),pad=(0,0),font=('Helvetica',10),disabled=True,background_color='2c2825',no_scrollbar=True,border_width=0)

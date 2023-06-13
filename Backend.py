@@ -5,7 +5,8 @@ from requests.exceptions import ConnectionError
 import os
 
 simpleWeapons = ['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear','Crossbow, light','Dart','Shortbow','Sling']
-MartialWeapons = ['Battleaxe','Flail','Glaive','Greataxe','Greatsword','Halberd','Lance','Longsword','Maul','Morningstar','Pike','Rapier','Scimitar','Trident','War pick','Warhammer','Whip','Blowgun','Crossbow, hand','Crossbow, heavy','Longbow']
+MeleeMartialWeapons = ['Battleaxe','Flail','Glaive','Greataxe','Greatsword','Halberd','Lance','Longsword','Maul','Morningstar','Pike','Rapier','Scimitar','Trident','War pick','Warhammer','Whip']
+rangedMartialWeapon = ['Blowgun','Crossbow, hand','Crossbow, heavy','Longbow']
 artisanTools = ["Alchemist's supplies","Brewer's supplies","Calligrapher's supplies","Carpenter's tools","Cartographer's tools","Cobbler's tools","Cook's utensils","Glassblower's tools","Jeweler's tools","Leatherworker's tools","Mason's tools","Painter's supplies","Potter's tools","Smith's tools","Tinker's tools","Weaver's tools","Woodcarver's tools"]
 Asi = ['Strength','Dexterity','Constitution','Intellegence','Wisdom','Charisma']
 
@@ -321,10 +322,12 @@ class requester:
                 if line.find('two simple weapons') != -1:
                     buffer.append("sg.DropDown(%s,s=(25,10),readonly=True,default_value='')" % (str(simpleWeapons)))
                     buffer.append("sg.DropDown(%s,s=(25,10),readonly=True,default_value='')" % (str(simpleWeapons)))
+                elif line.find('(a) studded leather armor or (b) scale mail armor') != -1:
+                    buffer.append("sg.DropDown(['Studded leather','Scale mail'],s=(25,10),readonly=True,default_value='Studded leather')")
             elif line[0:3] == '<h3': #catagories
                 #check for diffrent lv
                 t = self.removeEffects(line)
-                l = keywords[t]
+                l = self.firstKey(keywords,t)
                 if l > currentLV:
                     currentLV = l
                     layout.append("sg.Text(\"%s\",s=(45,1),pad=(0,4),font=('Helvetica',15))" % ('Level '+str(l)))
@@ -359,6 +362,8 @@ class requester:
                 z = line.find('Choose two from')
                 t = line[z+15:line.find('<',z+15)]
                 ts = t.split(',')
+                ts[len(ts)-1] = ts[len(ts)-1].replace('and ','')
+                layout.append("sg.DropDown(%s,s=(25,10),readonly=True,default_value='')" % (str(ts)))
                 layout.append("sg.DropDown(%s,s=(25,10),readonly=True,default_value='')" % (str(ts)))
             count += 1
         #fix layout for saving
@@ -367,6 +372,12 @@ class requester:
             L = L.replace('\n','/n').replace("'","***")
         return layout
     
+    def firstKey(self,dic:dict,key) -> int:
+        for i in dic.keys():
+            if i.find(key) != -1:
+                return dic[i]
+        return -1
+
     def loadLayout(self,clas,level):
         d = self.dh.loadClass(clas)
         dout:list = d['Layout']
