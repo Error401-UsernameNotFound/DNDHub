@@ -1,9 +1,10 @@
 Name: Aasimar
-ASI: 
-		Aasimar Celestial Features		
+ASI: Ability Score Increase. When determining your character’s ability scores, increase one score by 2 and increase a different score by 1, or increase three different scores by 1. You can't raise any of your scores above 20.
+
 Description:
 Whether descended from a celestial being or infused with heavenly power, aasimar are mortals who carry a spark of the Upper Planes within their souls. They can fan that spark to bring light, ease wounds, and unleash the fury of the heavens.Aasimar can arise among any population of mortals. They resemble their parents, but they live for up to 160 years and often have features that hint at their celestial heritage. These often begin subtle and become more obvious when the aasimar gains the ability to reveal their full celestial nature. The Aasimar Celestial Features table has examples you can choose or use as inspiration to create your own.
-Features:
+
+		Aasimar Celestial Features		
 --------------------------------------------------------------------------------------------------------------
 d6		Celestial Feature		
 --------------------------------------------------------------------------------------------------------------
@@ -22,8 +23,7 @@ d6		Celestial Feature
 
 
 
-Ability Score Increase. When determining your character’s ability scores, increase one score by 2 and increase a different score by 1, or increase three different scores by 1. You can't raise any of your scores above 20.
-
+Features:
 Creature Type. You are a Humanoid.
 
 Size. You are Medium or Small. You choose the size when you select this race.

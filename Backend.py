@@ -16,6 +16,7 @@ class requester:
         self.dh = dh.dataHelper()
         self.infoDict = {}
         self.allSubraces = []
+        self.RacialBonus = [0,0,0,0,0,0]
     def getRaces(self) -> list:
         races = []
         rawRaces = []
@@ -91,7 +92,7 @@ class requester:
                     self.allSubraces.append(currentSubrace)
                     self.infoDict[currentSubrace] = ''
                 
-            if i.find('</span></h2>') != -1: #new subrace
+            if i.find('</span></h2>') != -1 and i.find('Traits') == -1 and i.find('Racial Features') == -1: #new subrace
                 a = i.find('<span>')+6
                 sub = i[a:i.find('</span>')]
                 if sub.find(race,0,len(race)) == -1: sub = race + '- ' + sub
@@ -154,17 +155,22 @@ class requester:
                 sInfo:list[str] = self.infoDict[name].split('\n')
                 #everything to the asi is dict
                 c = 0
-                while c < len(sInfo) and sInfo[c] != 'Ability Score Increase:' :
+                while c < len(sInfo) and sInfo[c].find('Ability Score Increase') == -1 :
                     c += 1
-                if c == len(sInfo): c = 1 #no asi?
-                RaceInfo['Description'] = '\n'.join(sInfo[0:c])
-                RaceInfo['ASI'] = '\n'.join(sInfo[c:c+2])
-                RaceInfo['Features'] = '\n'.join(sInfo[c+2:len(sInfo)])
+                if c == len(sInfo):
+                    #no asi
+                    RaceInfo['Description'] = '\n'.join(sInfo[0:1])
+                    RaceInfo['ASI'] = 'Ability Score Increase. One ability score of your choice increases by 2.'
+                    RaceInfo['Features'] = '\n'.join(sInfo[3:len(sInfo)])
+                else:
+                    RaceInfo['Description'] = '\n'.join(sInfo[0:c])
+                    RaceInfo['ASI'] = '\n'.join(sInfo[c:c+2]) 
+                    RaceInfo['Features'] = '\n'.join(sInfo[c+2:len(sInfo)])
                 self.dh.saveRace(RaceInfo)
                 return self.getRaceFile(name)
 
-    def swapWindow(self,window:sg.Window,newLayout) -> sg.Window:
-        newWindow = sg.Window('D&D Helper',newLayout)
+    def swapWindow(self,window:sg.Window,newLayout:list) -> sg.Window:
+        newWindow = sg.Window('D&DHub',newLayout)
         window.close()
         window = newWindow
         return window
@@ -283,7 +289,7 @@ class requester:
             features = i[2].split(', ')
             lv = int(i[0].replace('st','').replace('nd','').replace('rd','').replace('th',''))
             for a in features:
-                if a != 'Ability Score Improvement': #manual add in for now
+                if list(keywords.keys()).count(a) == 0: #manual add in for now
                     keywords[a] = lv
 
         processLayout = True
@@ -405,3 +411,64 @@ class requester:
             
             layout.append([i])
         return layout
+    
+    def makeScoreColoum(self,ScoreType:str,keymod:str):
+        L = [
+            [sg.Text(ScoreType,s=(20,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+            [sg.Text('Total Score',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10)),sg.Text('8',key='ts'+keymod,s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='r')],
+            [sg.Text('Modifier',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10)),sg.Text('-1',key='mod'+keymod,s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='r')],
+            [sg.Text('Base Score',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10)),sg.Text('8',s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='r')],
+            [sg.Text('Racial Bonus',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10)),sg.Text('+0',key='rb'+keymod,s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='r')],
+            [sg.Text('Ability Improvements',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10)),sg.Text('+0',key='ai'+keymod,s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='r')],
+
+        ]
+        return sg.Column(L)
+    
+    def calculateCost(self,Score):
+        #distence from 8
+        if Score <= 12:
+            return Score-8
+        if Score > 12:
+            return 3+(Score-12)*2
+    
+    def StrAddition(slef,mod):
+        if mod == 'str':
+            return ''
+        if mod == 'dex':
+            return '0'
+        if mod == 'con':
+            return '1'
+        if mod == 'int':
+            return '2'
+        if mod == 'wis':
+            return '3'
+        if mod == 'cha':
+            return '4'
+        
+    def getRacialBonus(self,race:str) -> dict:
+        Datapack = {'str':0,'dex':0,'con':0,'int':0,'wis':0,'cha':0,'custom':0}
+        Race = self.dh.loadRace(race)
+        Asi:str = Race['ASI']
+        #Check for custom asi.
+        if Asi.find('increase one score by 2 and increase a different score by 1, or increase three different scores by 1.') != -1:
+            Datapack['custom'] = 3 
+        elif Asi.find('Two different ability scores of your choice increase by 1') != -1:
+            Datapack['custom'] = 2 
+        if Asi.find('one other ability score of your choice increases by 1') != -1:
+            Datapack['custom'] = 1
+        aSplit = Asi.split(' and ')
+        for a in aSplit:
+           if a.find('Strength') != -1:
+               Datapack['str'] = int(self.firstInt(a))
+           if a.find('Constitution') != -1:
+               Datapack['con'] = int(self.firstInt(a))
+           if a.find('Dexterity') != -1:
+               Datapack['dex'] = int(self.firstInt(a))
+           if a.find('Intelligence') != -1:
+               Datapack['int'] = int(self.firstInt(a))
+           if a.find('Wisdom') != -1:
+               Datapack['wis'] = int(self.firstInt(a))
+           if a.find('Charisma') != -1:
+               Datapack['cha'] = int(self.firstInt(a))
+        print(Datapack)
+        return Datapack

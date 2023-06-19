@@ -23,7 +23,7 @@
         WIKIREQUEST.info.categoryId = 11887298;
         WIKIREQUEST.info.themeId = 2386862;
         WIKIREQUEST.info.requestPageName = "barbarian";
-        OZONE.request.timestamp = 1686677055;
+        OZONE.request.timestamp = 1687147417;
         OZONE.request.date = new Date();
         WIKIREQUEST.info.lang = 'en';
                 WIKIREQUEST.info.pageUnixName = "barbarian";
@@ -750,10 +750,10 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
   <div class="units">
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://thekingkillerchronicle.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/thekingkillerchronicle.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://inctr-palliative-care-handbook.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/inctr-palliative-care-handbook.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://thekingkillerchronicle.wikidot.com">Хроника Убийцы Короля</a></h3>
+            <h3><a target="_blank" href="http://inctr-palliative-care-handbook.wikidot.com">INCTR Palliative Care Handbook</a></h3>
             <div class="desc">          
               
             </div>
@@ -761,21 +761,10 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://pepsipedia.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/pepsipedia.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://coscup.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/coscup.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://pepsipedia.wikidot.com">Pepsipedia</a></h3>
-            <div class="desc">          
-              bepis!
-            </div>
-          </div>
-        </div>
-              <div class="unit">
-          <div class="inner">
-            <a target="_blank" class="image" href="http://join.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/join.wikidot.com/80.jpg"/>
-            </a>
-            <h3><a target="_blank" href="http://join.wikidot.com">Join this Site!</a></h3>
+            <h3><a target="_blank" href="http://coscup.wikidot.com">COSCUP WIKI</a></h3>
             <div class="desc">          
               
             </div>
@@ -783,12 +772,23 @@ Powered by <a href="http://www.wikidot.com">Wikidot.com</a>
         </div>
               <div class="unit">
           <div class="inner">
-            <a target="_blank" class="image" href="http://porsche.wikidot.com">
-              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/porsche.wikidot.com/80.jpg"/>
+            <a target="_blank" class="image" href="http://sped.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/sped.wikidot.com/80.jpg"/>
             </a>
-            <h3><a target="_blank" href="http://porsche.wikidot.com">Porsche Wiki</a></h3>
+            <h3><a target="_blank" href="http://sped.wikidot.com">The Special Ed Wiki</a></h3>
             <div class="desc">          
-              Brought to You By RedLine Technik | RedLineTechnik.com
+              sarah irvine belson (sarah@american.edu)
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://crosswindsgarou.wikidot.com">
+              <img class="thumbnail" alt="" src="http://thumbnails.wdfiles.com/thumbnail/site/crosswindsgarou.wikidot.com/80.jpg"/>
+            </a>
+            <h3><a target="_blank" href="http://crosswindsgarou.wikidot.com">Crosswindsgarou</a></h3>
+            <div class="desc">          
+              
             </div>
           </div>
         </div>

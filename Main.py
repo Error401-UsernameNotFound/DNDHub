@@ -190,7 +190,6 @@ ArtificerLayout = [
     [sg.Text('',s=(45,4),pad=(0,4),font=(sg.DEFAULT_FONT[0],15))],#spacer at the end
 ]
 #***************Debug***********
-dWindow = sg.Window('Debug',[[sg.Column(ArtificerLayout,scrollable=True,s=(700,600))]])
 
 sg.Text('Level 4',s=(45,1),pad=(0,4),font=('Helvetica',15))
 sg.Text('Ability Score Improvement',s=(45,1),pad=(0,4),font=('Helvetica',15))
@@ -207,7 +206,24 @@ sg.DropDown(['Arcana', 'History', 'Investigation', 'Medicine', 'Nature', 'Percep
 sg.DropDown(['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear'],s=(25,10),readonly=True,default_value='Club')
 sg.DropDown(['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear'],s=(25,10),readonly=True,default_value='Club')
 sg.DropDown(['Studded leather','Scale mail'],s=(25,10),readonly=True,default_value='Studded leather')
-# Create the main window
+
+
+
+p = [8,9,10,11,12,13,14,15]
+PointBuyScreen = [
+    [sg.Text('Ability Scores',s=(60,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],20))],
+    [sg.Text('POINTS REMAINING',s=(90,1),pad=(0,4),font=('Helvetica',15),justification = 'c')],
+    [sg.Text('27/27',s=(90,1),pad=(0,4),font=('Helvetica',15),key = 'points',justification = 'c')],
+    [sg.Text('STRENGTH',s=(16,1),pad=(0,4),font=('Helvetica',15)),sg.Text('DEXTERITY',s=(16,1),pad=(0,4),font=('Helvetica',15)),sg.Text('CONSTITUTION',s=(16,1),pad=(0,4),font=('Helvetica',15)),sg.Text('INTELLIGENCE',s=(16,1),pad=(0,4),font=('Helvetica',15)),sg.Text('WISDOM',s=(16,1),pad=(0,4),font=('Helvetica',15)),sg.Text('CHARISMA',s=(16,1),pad=(0,4),font=('Helvetica',15))],
+    [sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(6,0),enable_events=True,key='str'),sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(6,0),enable_events=True,key='dex'),sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(6,0),enable_events=True,key='con'),sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(6,0),enable_events=True,key='int'),sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(6,0),enable_events=True,key='wis'),sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(6,0),enable_events=True,key='cha')],
+    [sg.Text('Score Calculations',s=(90,1),pad=(0,4),font=('Helvetica',15))],
+    [rq.makeScoreColoum('Strength',''),rq.makeScoreColoum('Dexterity','0'),rq.makeScoreColoum('Constitution','1'),rq.makeScoreColoum('Intellegence','2'),rq.makeScoreColoum('Wisdom','3'),rq.makeScoreColoum('Charisma','4')]
+]
+#***************Debug***********
+#dWindow = sg.Window('Debug',[[sg.Column(PointBuyScreen,s=(1052,500))]])
+#***************Debug***********
+
+#Create the main window
 mainWindow = sg.Window('D&DHub', startlayout)
 
 #Variables 
@@ -265,6 +281,10 @@ while True:
     
     elif event == "Submit Race":
         tempCharacter['race'] = currentRace
+        if values["info"].find('Increase one ability score by 2, and increase a different one by 1, or increase three different scores by 1.') != -1:
+            tempCharacter['CustomAsi'] = True
+        else:
+            tempCharacter['CustomAsi'] = False
         if currentRace != '':
             mainWindow = rq.swapWindow(mainWindow,classesMenu)
 
@@ -277,7 +297,38 @@ while True:
         if values['classes'] != '':
             classLayout = rq.loadLayout(values['classes'],values['level'])
             classColumn = sg.Column(classLayout,scrollable=True,s=(700,600))
-            t = [[classColumn],[[sg.Button("Submit",key="Confirm Class",s=(19,1),pad=(0,0),button_color = (C[1],B),border_width=0),sg.Button("Reload Class",key="Reload",s=(19,1),pad=(0,0),button_color = (C[1],B),border_width=0)]]]
+            t = [[classColumn],[sg.Button("Submit",key="Confirm Class",s=(19,1),pad=(0,0),button_color = (C[1],B),border_width=0)]]
             mainWindow = rq.swapWindow(mainWindow,t)
+            
+    #Custom Class wimdow
+    if event == 'Confirm Class':
+        #go to asi screen 'Locathah'
+        mainWindow = rq.swapWindow(mainWindow,PointBuyScreen)
+        data = rq.getRacialBonus(currentRace)
+        event, values = mainWindow.read(timeout=0)
+        for i in data.keys():
+            i:str
+            if i != 'custom' and data[i] != 0:
+                t = 'ts' + rq.StrAddition(i)
+                m = 'mod' + rq.StrAddition(i)
+                rb = 'rb' + rq.StrAddition(i)
+                mainWindow[rb].update('+'+str(data[i]))
+                mainWindow[t].update(8+data[i])
+                mainWindow[m].update((int(8+data[i]/2)-5))
     
+    #9 1p, 10 1p, 11 1p, 12 1p, 13 1p, 14 2p, 15 2p, 12 1p,
+    #elements str (null), dex 0, con 1, int 2, wis 3, cha 4
+    #Asi screen
+    if event == 'str' or event == 'dex' or event == 'con' or event == 'int' or event == 'wis' or event == 'cha':
+        totalCost = 0
+        for v in values.values():
+            totalCost += rq.calculateCost(v)
+        r = 27 - totalCost
+        t = 'ts' + rq.StrAddition(event)
+        m = 'mod' + rq.StrAddition(event)
+        rb = 'rb' + rq.StrAddition(event)
+        mainWindow[t].update(values[event]+int(mainWindow[rb].DisplayText))
+        mainWindow[m].update((int((values[event]+int(mainWindow[rb].DisplayText))/2)-5))
+        mainWindow['points'].update(str(r)+'/27')
+
 mainWindow.close()
