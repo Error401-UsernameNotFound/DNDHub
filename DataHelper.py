@@ -56,6 +56,20 @@ class dataHelper:
         data['Layout'] = Rtxt[lstart+1:len(Rtxt)]
         return data
 
+    def loadOverideClass(self,clas):
+        Rfile = open('Classes Overide/'+clas+'.clas','r',encoding='utf-8')
+        Rtxt = Rfile.readlines()
+        data = {}
+        data['Name'] = Rtxt[0].removeprefix('Name: ')
+        lstart = 0
+        c = 4
+        for i in Rtxt[4:len(Rtxt)-1]:
+            if i == 'Layout:\n': lstart = c
+            c += 1
+
+        data['Info'] = ''.join(Rtxt[3:lstart])
+        data['Layout'] = Rtxt[lstart+1:len(Rtxt)]
+        return data
     def saveSubclass(self,data:dict):
         pass
     def loadSubclass(self):

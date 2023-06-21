@@ -10,6 +10,10 @@ rangedMartialWeapon = ['Blowgun','Crossbow, hand','Crossbow, heavy','Longbow']
 artisanTools = ["Alchemist's supplies","Brewer's supplies","Calligrapher's supplies","Carpenter's tools","Cartographer's tools","Cobbler's tools","Cook's utensils","Glassblower's tools","Jeweler's tools","Leatherworker's tools","Mason's tools","Painter's supplies","Potter's tools","Smith's tools","Tinker's tools","Weaver's tools","Woodcarver's tools"]
 Asi = ['Strength','Dexterity','Constitution','Intellegence','Wisdom','Charisma']
 
+# colors
+C = sg.theme_button_color()
+B = sg.theme_background_color()
+
 class requester:
     def __init__(self) -> None:
         self.source = "http://dnd5e.wikidot.com"
@@ -223,10 +227,14 @@ class requester:
         
     def checkForClassFile(self,clas:str) -> str:
         try:
-            t = self.dh.loadClass(clas)
+            t = self.dh.loadOverideClass(clas)
             return t["Info"]
         except:
-            return self.getClassinformation(clas)
+            try:
+                t = self.dh.loadClass(clas)
+                return t["Info"]
+            except:
+                return self.getClassinformation(clas)
 
 
 
@@ -253,7 +261,7 @@ class requester:
     def firstInt(self,string:str) -> str:
         s = ''
         for i in string:
-            if i.isnumeric():
+            if i.isnumeric() or i == '-':
                 s += i
             elif s != '':
                 return s
@@ -385,7 +393,10 @@ class requester:
         return -1
 
     def loadLayout(self,clas,level):
-        d = self.dh.loadClass(clas)
+        try:
+            d = self.dh.loadOverideClass(clas)
+        except:
+            d = self.dh.loadClass(clas)
         dout:list = d['Layout']
         layout = []
         c = 'class t:\n def __init__(self) -> None:\n  pass\n def rL(self):\n  return layout' #injected class wrapper
@@ -420,6 +431,7 @@ class requester:
             [sg.Text('Base Score',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10)),sg.Text('8',s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='r')],
             [sg.Text('Racial Bonus',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10)),sg.Text('+0',key='rb'+keymod,s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='r')],
             [sg.Text('Ability Improvements',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10)),sg.Text('+0',key='ai'+keymod,s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='r')],
+            [sg.Text('Custom Bonus',s=(13,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10)),sg.DropDown([0,1,2],default_value=0,key='cus'+keymod,s=(6,3),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),readonly=True,enable_events=True,)],
 
         ]
         return sg.Column(L)
@@ -444,6 +456,20 @@ class requester:
             return '3'
         if mod == 'cha':
             return '4'
+
+    def StrSubtractor (self,num:str):
+        if num == 'cus':
+            return 'str'
+        if num == 'cus0':
+            return 'dex'
+        if num == 'cus1':
+            return 'con'
+        if num == 'cus2':
+            return 'int'
+        if num == 'cus3':
+            return 'wis'
+        if num == 'cus4':
+            return 'cha'
         
     def getRacialBonus(self,race:str) -> dict:
         Datapack = {'str':0,'dex':0,'con':0,'int':0,'wis':0,'cha':0,'custom':0}
@@ -452,8 +478,10 @@ class requester:
         #Check for custom asi.
         if Asi.find('increase one score by 2 and increase a different score by 1, or increase three different scores by 1.') != -1:
             Datapack['custom'] = 3 
+        elif Asi.find('Increase one ability score by 2 and increase a different one by 1, or increase three different ability scores by 1'):
+            Datapack['custom'] = 3 
         elif Asi.find('Two different ability scores of your choice increase by 1') != -1:
-            Datapack['custom'] = 2 
+            Datapack['custom'] = 2
         if Asi.find('one other ability score of your choice increases by 1') != -1:
             Datapack['custom'] = 1
         aSplit = Asi.split(' and ')
