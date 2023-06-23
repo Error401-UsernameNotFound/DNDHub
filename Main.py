@@ -77,6 +77,11 @@ PointBuyScreen = [
     [rq.makeScoreColoum('Strength',''),rq.makeScoreColoum('Dexterity','0'),rq.makeScoreColoum('Constitution','1'),rq.makeScoreColoum('Intellegence','2'),rq.makeScoreColoum('Wisdom','3'),rq.makeScoreColoum('Charisma','4')],
     [sg.Button("Submit",key="Submit pointbuy",s=(20,1),button_color = (C[1],B),border_width=0)]
 ]
+
+
+
+
+
 #***************Debug***********
 #dWindow = sg.Window('Debug',[[sg.Column(PointBuyScreen,s=(1080,400))]])
 #***************Debug***********
@@ -206,6 +211,16 @@ while True:
                    total += values[k]
             if total <= data['custom']:
                 print('move')
+                tempCharacter['str'] = int(mainWindow['ts'].DisplayText)
+                tempCharacter['dex'] = int(mainWindow['ts0'].DisplayText)
+                tempCharacter['con'] = int(mainWindow['ts1'].DisplayText)
+                tempCharacter['int'] = int(mainWindow['ts2'].DisplayText)
+                tempCharacter['wis'] = int(mainWindow['ts3'].DisplayText)
+                tempCharacter['cha'] = int(mainWindow['ts4'].DisplayText)
                 pass #move to the next thing
+            else:
+                print('to many custom points')
+        else:
+            print('to many points used')
 
 mainWindow.close()
