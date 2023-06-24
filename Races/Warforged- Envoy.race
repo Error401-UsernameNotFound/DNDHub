@@ -1,9 +1,6 @@
-Name: Warforged- Envoy
-ASI: Ability Score Increase. Two different ability scores of your choice increase by 1.
-
-Description:
-As an envoy, you were designed with a certain specialized function in mind. You might be an assassin, a healer, or an entertainer, to name a few possibilities. Envoys are the rarest of the warforged subraces, and yours could be a unique design.
-Features:
-Specialized Design. You gain one skill proficiency of your choice, one tool proficiency of your choice, and fluency in one language of your choice.
-
-Integrated Tool. Choose one tool you’re proficient with. This tool is integrated into your body, and you double your proficiency bonus for any ability checks you make with it. You must have your hands free to use this integrated tool.
+{
+    "Name": "Warforged- Envoy",
+    "Description": "As an envoy, you were designed with a certain specialized function in mind. You might be an assassin, a healer, or an entertainer, to name a few possibilities. Envoys are the rarest of the warforged subraces, and yours could be a unique design.",
+    "ASI": "Ability Score Increase. Two different ability scores of your choice increase by 1.\n",
+    "Features": "Specialized Design. You gain one skill proficiency of your choice, one tool proficiency of your choice, and fluency in one language of your choice.\n\nIntegrated Tool. Choose one tool you\u2019re proficient with. This tool is integrated into your body, and you double your proficiency bonus for any ability checks you make with it. You must have your hands free to use this integrated tool.\n"
+}

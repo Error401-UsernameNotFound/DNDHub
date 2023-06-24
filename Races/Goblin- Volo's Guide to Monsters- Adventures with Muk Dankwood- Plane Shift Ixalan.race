@@ -1,19 +1,6 @@
-Name: Goblin- Volo's Guide to Monsters- Adventures with Muk Dankwood- Plane Shift Ixalan
-ASI: Ability Score Increase. Your Dexterity score increases by 2.
-
-Description:
-Goblins are native to Ixalan, and their eager curiosity drew them to the ships of the Brazen Coalition where the pirates first made landfall on the Sun Empire's shores. Though they still thrive in remote jungle colonies, goblins are most commonly seen swinging on the ropes of sleek pirate ships.Goblins stand about three feet tall, though they rarely stand upright. They prefer a crouched posture that lets them scramble quickly on all fours, aided by their long prehensile tails. Their hearing and eyesight make them excellent lookouts, and their agility serves them well as crew members on pirate ships. They climb, swing, and jump easily among a ship's ropes, and can get into tight spaces that humans can't. For better or worse, many goblins are also incorrigible pranksters, and they often have a hard time determining when a prank is inappropriate, is poorly timed, or has gone too far.
-Features:
-Age. Goblins mature faster than humans, reaching adulthood around age 12. They age noticeably faster, and though few goblins live to old age, the most cautious rarely live longer than 50 years.
-
-Alignment. Most goblins are wildly chaotic, with no particular inclination toward good or evil but a strong tendency toward mischief.
-
-Size. Goblins average about 3 feet tall and weigh about 40 pounds. Your size is Small.
-
-Speed. Your base walking speed is 25 feet
-
-Agile Climber. You have a climbing speed of 25 feet. You can't use your climbing speed while you wear medium or heavy armor. (If your campaign uses the variant rule for encumbrance, you can't use your climbing speed if you are encumbered.)
-
-Darkvision. Accustomed to life in the jungle night, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
-
-Languages. You can speak, read, and write Common (if it exists in your campaign) and Goblin.
+{
+    "Name": "Goblin- Volo's Guide to Monsters- Adventures with Muk Dankwood- Plane Shift Ixalan",
+    "Description": "Goblins are native to Ixalan, and their eager curiosity drew them to the ships of the Brazen Coalition where the pirates first made landfall on the Sun Empire's shores. Though they still thrive in remote jungle colonies, goblins are most commonly seen swinging on the ropes of sleek pirate ships.Goblins stand about three feet tall, though they rarely stand upright. They prefer a crouched posture that lets them scramble quickly on all fours, aided by their long prehensile tails. Their hearing and eyesight make them excellent lookouts, and their agility serves them well as crew members on pirate ships. They climb, swing, and jump easily among a ship's ropes, and can get into tight spaces that humans can't. For better or worse, many goblins are also incorrigible pranksters, and they often have a hard time determining when a prank is inappropriate, is poorly timed, or has gone too far.",
+    "ASI": "Ability Score Increase. Your Dexterity score increases by 2.\n",
+    "Features": "Age. Goblins mature faster than humans, reaching adulthood around age 12. They age noticeably faster, and though few goblins live to old age, the most cautious rarely live longer than 50 years.\n\nAlignment. Most goblins are wildly chaotic, with no particular inclination toward good or evil but a strong tendency toward mischief.\n\nSize. Goblins average about 3 feet tall and weigh about 40 pounds. Your size is Small.\n\nSpeed. Your base walking speed is 25 feet\n\nAgile Climber. You have a climbing speed of 25 feet. You can't use your climbing speed while you wear medium or heavy armor. (If your campaign uses the variant rule for encumbrance, you can't use your climbing speed if you are encumbered.)\n\nDarkvision. Accustomed to life in the jungle night, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\nLanguages. You can speak, read, and write Common (if it exists in your campaign) and Goblin.\n"
+}

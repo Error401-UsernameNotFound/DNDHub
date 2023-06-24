@@ -1,21 +1,6 @@
-Name: Halfling
-ASI: Ability Score Increase. Your Dexterity score increases by 2.
-
-Description:
-The comforts of home are the goals of most halflings' lives: a place to settle in peace and quiet, far from marauding monsters and clashing armies. Others form nomadic bands that travel constantly, lured by the open road and the wide horizon to discover the wonders of new lands and peoples. Halflings work readily with others, and they are loyal to their friends, whether halfling or otherwise. They can display remarkable ferocity when their friends, families, or communities are threatened
-Features:
-Age. A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.
-
-Alignment. Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of the old ways.
-
-Size. Halflings average about 3 feet tall and weigh about 40 pounds. Your size is small.
-
-Speed. Your base walking speed is 25 feet.
-
-Lucky. When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die. You must use the new result, even if it is a 1.
-
-Brave. You have advantage on saving throws against being frightened.
-
-Nimble. You can move through the space of any creature that is of a size larger than yours.
-
-Languages. You can speak, read, and write Common and Halfling.
+{
+    "Name": "Halfling",
+    "Description": "The comforts of home are the goals of most halflings' lives: a place to settle in peace and quiet, far from marauding monsters and clashing armies. Others form nomadic bands that travel constantly, lured by the open road and the wide horizon to discover the wonders of new lands and peoples. Halflings work readily with others, and they are loyal to their friends, whether halfling or otherwise. They can display remarkable ferocity when their friends, families, or communities are threatened",
+    "ASI": "Ability Score Increase. Your Dexterity score increases by 2.\n",
+    "Features": "Age. A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.\n\nAlignment. Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of the old ways.\n\nSize. Halflings average about 3 feet tall and weigh about 40 pounds. Your size is small.\n\nSpeed. Your base walking speed is 25 feet.\n\nLucky. When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die. You must use the new result, even if it is a 1.\n\nBrave. You have advantage on saving throws against being frightened.\n\nNimble. You can move through the space of any creature that is of a size larger than yours.\n\nLanguages. You can speak, read, and write Common and Halfling.\n"
+}

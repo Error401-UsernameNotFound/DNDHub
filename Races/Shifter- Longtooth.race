@@ -1,9 +1,6 @@
-Name: Shifter- Longtooth
-ASI: Ability Score Increase. Your Strength score increases by 2.
-
-Description:
-Longtooth shifters are fierce and aggressive, but they form deep bonds with their friends. Many longtooth shifters have canine traits that become more pronounced as they shift, but they might instead draw on tigers, hyenas, or other predators.
-Features:
-Fierce. You have proficiency in the Intimidation skill.
-
-Shifting Feature. While shifted, you can use your elongated fangs to make an unarmed strike as a bonus action. If you hit with your fangs, you can deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+{
+    "Name": "Shifter- Longtooth",
+    "Description": "Longtooth shifters are fierce and aggressive, but they form deep bonds with their friends. Many longtooth shifters have canine traits that become more pronounced as they shift, but they might instead draw on tigers, hyenas, or other predators.",
+    "ASI": "Ability Score Increase. Your Strength score increases by 2.\n",
+    "Features": "Fierce. You have proficiency in the Intimidation skill.\n\nShifting Feature. While shifted, you can use your elongated fangs to make an unarmed strike as a bonus action. If you hit with your fangs, you can deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.\n"
+}

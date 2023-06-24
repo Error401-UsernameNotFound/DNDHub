@@ -79,11 +79,58 @@ PointBuyScreen = [
 ]
 
 
-
+savingThrowCol = sg.Column([
+    [sg.Text('Saving Throws',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='c')],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='strSave'),sg.Text('Strength',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='dexSave'),sg.Text('Dexterity',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='conSave'),sg.Text('Constitution',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='intSave'),sg.Text('Inteligence',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='wisSave'),sg.Text('Wisdom',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='chaSave'),sg.Text('Charisma',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    ])
+skillsCol = sg.Column([
+    [sg.Text('Skills',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='c')],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Acrobatics'),sg.Text('Acrobatics',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Animal Handling'),sg.Text('Animal Handling',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Arcana'),sg.Text('Arcana',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Athletics'),sg.Text('Athletics',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Deception'),sg.Text('Deception',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='History'),sg.Text('History',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Insight'),sg.Text('Insight',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Intimidation'),sg.Text('Intimidation',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Investigation'),sg.Text('Investigation',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Medicine'),sg.Text('Medicine',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Nature'),sg.Text('Nature',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Performance'),sg.Text('Performance',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Persuasion'),sg.Text('Persuasion',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Religion'),sg.Text('Religion',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Sleight of Hand'),sg.Text('Sleight of Hand',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Stealth'),sg.Text('Stealth',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Survival'),sg.Text('Survival',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))]
+    ])
+InictiveBlock = sg.Column([
+    [],
+])
+CharacterSheet = [
+    [sg.Text('Characture Name',s=(35,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],20)), sg.Text('Class and level',s=(20,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],10)), sg.Text('Race',s=(30,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],10)), sg.Text('Background',s=(20,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],10))],
+    [rq.makeModifierColoum('Strength',''),rq.makeModifierColoum('Dexterity','0'),rq.makeModifierColoum('Constitution','1'),rq.makeModifierColoum('Intellegence','2'),rq.makeModifierColoum('Wisdom','3'),rq.makeModifierColoum('Charisma','4')],
+    [skillsCol,savingThrowCol],
+]
 
 
 #***************Debug***********
-#dWindow = sg.Window('Debug',[[sg.Column(PointBuyScreen,s=(1080,400))]])
+dWindow = sg.Window('Debug',[[sg.Column(CharacterSheet,s=(1120,600))]])
 #***************Debug***********
 
 #Create the main window

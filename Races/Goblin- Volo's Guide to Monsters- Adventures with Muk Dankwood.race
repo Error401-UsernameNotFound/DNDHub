@@ -1,21 +1,6 @@
-Name: Goblin- Volo's Guide to Monsters- Adventures with Muk Dankwood
-ASI: Ability Score Increase. Your Dexterity score increases by 2, and your Wisdom score increases by 1.
-
-Description:
-ce: Adventures with Muk, Extra Life 2019Dankwood goblins are much like any other run-of-the-mill goblin but they are much more gentle and artistic than the savage and uncouth goblins of the world.They are inquisitive and have a magical bond with the small forest creatures with which they are often friends. They are fast and numble and love to explore. Because of this they make great adventurers and guides.
-Features:
-Age. Dankwood goblins reach adulthood at age 8 and live up to 60 years.
-
-Alignment. Dankwood goblins are typically neutral or neutral good, though some mischievous dankwood goblins are chaotic neutral.
-
-Size. Dankwood goblins are between 3 and 4 feet tall and weigh between 40 and 80 pounds. Your size is Small.
-
-Speed. Your base walking speed is 30 feet
-
-Darkvision. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
-
-Speak with Small Beasts. Through sounds nad gestures you can communicate simple ideas with Small of smaller beasts. Dankwood goblins love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets.
-
-Nimble Escape. You can take the Disengage or Hide action as a bonus action on each of your turns.
-
-Languages. You can speak, read, and write Common and Goblin.
+{
+    "Name": "Goblin- Volo's Guide to Monsters- Adventures with Muk Dankwood",
+    "Description": "ce: Adventures with Muk, Extra Life 2019Dankwood goblins are much like any other run-of-the-mill goblin but they are much more gentle and artistic than the savage and uncouth goblins of the world.They are inquisitive and have a magical bond with the small forest creatures with which they are often friends. They are fast and numble and love to explore. Because of this they make great adventurers and guides.",
+    "ASI": "Ability Score Increase. Your Dexterity score increases by 2, and your Wisdom score increases by 1.\n",
+    "Features": "Age. Dankwood goblins reach adulthood at age 8 and live up to 60 years.\n\nAlignment. Dankwood goblins are typically neutral or neutral good, though some mischievous dankwood goblins are chaotic neutral.\n\nSize. Dankwood goblins are between 3 and 4 feet tall and weigh between 40 and 80 pounds. Your size is Small.\n\nSpeed. Your base walking speed is 30 feet\n\nDarkvision. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\nSpeak with Small Beasts. Through sounds nad gestures you can communicate simple ideas with Small of smaller beasts. Dankwood goblins love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets.\n\nNimble Escape. You can take the Disengage or Hide action as a bonus action on each of your turns.\n\nLanguages. You can speak, read, and write Common and Goblin.\n"
+}

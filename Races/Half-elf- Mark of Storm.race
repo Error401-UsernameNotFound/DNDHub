@@ -1,30 +1,6 @@
-Name: Half-elf- Mark of Storm
-ASI: If your Half-Elf has the Mark of Storm, these features replace the Ability Score Increase and the Half-Elf Versatility traits in the Player's Handbook
-Ability Score Increase. Your Charisma score increases by 2, and your Dexterity score increases by 1.
-Description:
-
-Features:
-
-Windwright's Intuition. Whenever you make a Dexterity (Acrobatics) check or any Ability Check involving Navigator's Tools, you can roll a d4 and add the number rolled to the total ability check.
-
-Storm's Boon. You have resistance to Lightning damage.
-
-Headwinds. You know the Gust cantrip. Starting at 3rd level, you can also cast the Gust of Wind spell with it. Once you cast this spell with this trait, you can't cast that spell again until you finish a Long Rest. Charisma is your Spellcasting Ability for this spell.
-
-Spells of the Mark. If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Storm Spells table are added to the spell list of your Spellcasting class.
-Mark of Storm Spell
-
-Spell Level		Spell		
---------------------------------------------------------------------------------------------------------------
-1st		Feather Fall		
---------------------------------------------------------------------------------------------------------------
-2nd		Gust of Wind		
---------------------------------------------------------------------------------------------------------------
-3rd		Sleet Storm		
---------------------------------------------------------------------------------------------------------------
-4th		Conjure Minor Elementals		
---------------------------------------------------------------------------------------------------------------
-5th		Conjure Elemental		
---------------------------------------------------------------------------------------------------------------
-
-
+{
+    "Name": "Half-elf- Mark of Storm",
+    "Description": "If your Half-Elf has the Mark of Storm, these features replace the Ability Score Increase and the Half-Elf Versatility traits in the Player's Handbook\n",
+    "ASI": "Ability Score Increase. Your Charisma score increases by 2, and your Dexterity score increases by 1.",
+    "Features": "\nWindwright's Intuition. Whenever you make a Dexterity (Acrobatics) check or any Ability Check involving Navigator's Tools, you can roll a d4 and add the number rolled to the total ability check.\n\nStorm's Boon. You have resistance to Lightning damage.\n\nHeadwinds. You know the Gust cantrip. Starting at 3rd level, you can also cast the Gust of Wind spell with it. Once you cast this spell with this trait, you can't cast that spell again until you finish a Long Rest. Charisma is your Spellcasting Ability for this spell.\n\nSpells of the Mark. If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Storm Spells table are added to the spell list of your Spellcasting class.\nMark of Storm Spell\n\nSpell Level\t\tSpell\t\t\n--------------------------------------------------------------------------------------------------------------\n1st\t\tFeather Fall\t\t\n--------------------------------------------------------------------------------------------------------------\n2nd\t\tGust of Wind\t\t\n--------------------------------------------------------------------------------------------------------------\n3rd\t\tSleet Storm\t\t\n--------------------------------------------------------------------------------------------------------------\n4th\t\tConjure Minor Elementals\t\t\n--------------------------------------------------------------------------------------------------------------\n5th\t\tConjure Elemental\t\t\n--------------------------------------------------------------------------------------------------------------\n\n\n"
+}

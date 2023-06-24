@@ -1,27 +1,6 @@
-Name: Elf- Mark of Shadow
-ASI: Ability Score Increase. Your Charisma score increases by 1
-
-Description:
-If you're an elf with the Mark of Shadow, you have this subrace, with the following traits.
-Features:
-Cunning Intuition. Whenever you roll a Dexterity (Stealth) check or a Charisma (Performance) check, roll a d4 and add the number rolled to the total ability check.
-
-Shape Shadows. You know the Minor Illusion cantrip. Starting at 3rd level, you can also cast the Invisibility spell with this trait. Once you cast either spell with this trait, you can't cast that spell again until you finish a long rest. Charisma is your Spellcasting Ability for these spells.
-
-Spells of the Mark. If you have the Spellcasting or Pact Magic class features, the spells on the Mark of Shadow Spells table are added to the spell list of your spellcasting class.
-Mark of Shadow Spell
-
-Spell Level		Spell		
---------------------------------------------------------------------------------------------------------------
-1st		Disguise Self		
---------------------------------------------------------------------------------------------------------------
-2nd		Darkness		
---------------------------------------------------------------------------------------------------------------
-3rd		Clairvoyance		
---------------------------------------------------------------------------------------------------------------
-4th		Greater Invisibility		
---------------------------------------------------------------------------------------------------------------
-5th		Mislead		
---------------------------------------------------------------------------------------------------------------
-
-
+{
+    "Name": "Elf- Mark of Shadow",
+    "Description": "If you're an elf with the Mark of Shadow, you have this subrace, with the following traits.",
+    "ASI": "Ability Score Increase. Your Charisma score increases by 1\n",
+    "Features": "Cunning Intuition. Whenever you roll a Dexterity (Stealth) check or a Charisma (Performance) check, roll a d4 and add the number rolled to the total ability check.\n\nShape Shadows. You know the Minor Illusion cantrip. Starting at 3rd level, you can also cast the Invisibility spell with this trait. Once you cast either spell with this trait, you can't cast that spell again until you finish a long rest. Charisma is your Spellcasting Ability for these spells.\n\nSpells of the Mark. If you have the Spellcasting or Pact Magic class features, the spells on the Mark of Shadow Spells table are added to the spell list of your spellcasting class.\nMark of Shadow Spell\n\nSpell Level\t\tSpell\t\t\n--------------------------------------------------------------------------------------------------------------\n1st\t\tDisguise Self\t\t\n--------------------------------------------------------------------------------------------------------------\n2nd\t\tDarkness\t\t\n--------------------------------------------------------------------------------------------------------------\n3rd\t\tClairvoyance\t\t\n--------------------------------------------------------------------------------------------------------------\n4th\t\tGreater Invisibility\t\t\n--------------------------------------------------------------------------------------------------------------\n5th\t\tMislead\t\t\n--------------------------------------------------------------------------------------------------------------\n\n\n"
+}

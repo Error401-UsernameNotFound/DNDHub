@@ -1,45 +1,6 @@
-Name: Dragonborn- Gem-ua
-ASI: Ability Score Increase. Increase one ability score by 2 and increase a different one by 1, or you increase three different scores by 1.
-
-Description:
-ce: Unearthed Arcana 78 - Draconic Options
-Features:
-Type. You are a Humanoid.
-
-Size. You are Medium.
-
-Speed. Your walking speed is 30 feet.
-
-Gem Ancestry. You trace your ancestry to a Gem dragon, granting you a special magical affinity. Choose one type of dragon from the Gem Ancestry table. This determines the damage type for your other traits as shown in the table.
-
-
-
-
-
-Gem Ancestry
-
---------------------------------------------------------------------------------------------------------------
-Dragon		Damage Type		
---------------------------------------------------------------------------------------------------------------
-Amethyst		Force		
---------------------------------------------------------------------------------------------------------------
-Crystal		Radiant		
---------------------------------------------------------------------------------------------------------------
-Emerald		Psychic		
---------------------------------------------------------------------------------------------------------------
-Sapphire		Thunder		
---------------------------------------------------------------------------------------------------------------
-Topaz		Necrotic		
---------------------------------------------------------------------------------------------------------------
-
-
-
-Breath Weapon. When you take the Attack action, you can replace one of your attacks with an exhalation of a magical energy in a 15-foot line that is 5 feet wide. Each creature in the area must make a Dexterity saving throw against a DC equal to 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d8 damage of the type associated with your Gem Ancestry on a failed save, and half as much damage on a successful one. This damage increases by 1d8 when you reach 5th level (3d8), 11th level (4d8), and 17th level (5d8). You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.
-
-Draconic Resistance. You have resistance to the damage type associated with your Gem Ancestry.
-
-Psionic Mind. You can telepathically speak to any creature you can see within 30 feet of you. You don’t need to share a language with the creature, but the creature must be able to understand at least one language. Your communication doesn’t give the creature the ability to respond to you telepathically.
-
-Gem Flight. Starting at 3rd level, you can use your bonus action to temporarily summon an array of spectral gems that match your Gem Ancestry in the shape of wings that last for 1 minute. For the duration, you gain a flying speed equal to your walking speed and can hover. Once you use this trait, you can’t do so again until you finish a long rest.
-
-Languages. You can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character.
+{
+    "Name": "Dragonborn- Gem-ua",
+    "Description": "ce: Unearthed Arcana 78 - Draconic Options",
+    "ASI": "Ability Score Increase. Increase one ability score by 2 and increase a different one by 1, or you increase three different scores by 1.\n",
+    "Features": "Type. You are a Humanoid.\n\nSize. You are Medium.\n\nSpeed. Your walking speed is 30 feet.\n\nGem Ancestry. You trace your ancestry to a Gem dragon, granting you a special magical affinity. Choose one type of dragon from the Gem Ancestry table. This determines the damage type for your other traits as shown in the table.\n\n\n\n\n\nGem Ancestry\n\n--------------------------------------------------------------------------------------------------------------\nDragon\t\tDamage Type\t\t\n--------------------------------------------------------------------------------------------------------------\nAmethyst\t\tForce\t\t\n--------------------------------------------------------------------------------------------------------------\nCrystal\t\tRadiant\t\t\n--------------------------------------------------------------------------------------------------------------\nEmerald\t\tPsychic\t\t\n--------------------------------------------------------------------------------------------------------------\nSapphire\t\tThunder\t\t\n--------------------------------------------------------------------------------------------------------------\nTopaz\t\tNecrotic\t\t\n--------------------------------------------------------------------------------------------------------------\n\n\n\nBreath Weapon. When you take the Attack action, you can replace one of your attacks with an exhalation of a magical energy in a 15-foot line that is 5 feet wide. Each creature in the area must make a Dexterity saving throw against a DC equal to 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d8 damage of the type associated with your Gem Ancestry on a failed save, and half as much damage on a successful one. This damage increases by 1d8 when you reach 5th level (3d8), 11th level (4d8), and 17th level (5d8). You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.\n\nDraconic Resistance. You have resistance to the damage type associated with your Gem Ancestry.\n\nPsionic Mind. You can telepathically speak to any creature you can see within 30 feet of you. You don\u2019t need to share a language with the creature, but the creature must be able to understand at least one language. Your communication doesn\u2019t give the creature the ability to respond to you telepathically.\n\nGem Flight. Starting at 3rd level, you can use your bonus action to temporarily summon an array of spectral gems that match your Gem Ancestry in the shape of wings that last for 1 minute. For the duration, you gain a flying speed equal to your walking speed and can hover. Once you use this trait, you can\u2019t do so again until you finish a long rest.\n\nLanguages. You can speak, read, and write Common and one other language that you and your DM agree is appropriate for the character.\n"
+}

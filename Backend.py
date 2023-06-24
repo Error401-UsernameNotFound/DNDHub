@@ -383,7 +383,7 @@ class requester:
         #fix layout for saving
         for L in layout:
             L:str
-            L = L.replace('\n','/n').replace("'","***")
+            L = L
         return layout
     
     def firstKey(self,dic:dict,key) -> int:
@@ -413,7 +413,7 @@ class requester:
             if type(i) == sg.Text:
                 textcolor = i.TextColor
             if type(i) == sg.Multiline:
-                i.DefaultText = i.DefaultText.replace('/n','\n').replace("***","'")
+                i.DefaultText = i.DefaultText
                 i.BackgroundColor = '#2c2825'
             if type(i) == sg.DropDown:
                 i.BackgroundColor = '#2c2825'
@@ -434,7 +434,15 @@ class requester:
             [sg.Text('Custom Bonus',s=(13,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10)),sg.DropDown([0,1,2],default_value=0,key='cus'+keymod,s=(6,3),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),readonly=True,enable_events=True,)],
 
         ]
-        return sg.Column(L)
+        return sg.Column(L,justification='c')
+    
+    def makeModifierColoum(self,ScoreType:str,keymod:str):
+        L = [
+            [sg.Text(ScoreType,s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],15),justification='c')],
+            [sg.Text('-1',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],20),key='mod'+keymod,justification='c')],
+            [sg.Text('8',s=(21,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='TotalScore'+keymod,justification='c')],
+        ]
+        return sg.Column(L,justification='c')
     
     def calculateCost(self,Score):
         #distence from 8

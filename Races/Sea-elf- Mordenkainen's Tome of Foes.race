@@ -1,27 +1,6 @@
-Name: Sea-elf- Mordenkainen's Tome of Foes
-ASI: Ability Score Increase. Your Dexterity score increases by 2, and your Constitution score increases by 1.
-
-Description:
-Sea elves fell in love with the wild beauty of the ocean in the earliest days of the multiverse. While other elves traveled from realm to realm, the sea elves navigated the deepest currents and explored the waters across a hundred worlds. Today, they live in small, hidden communities in the ocean shallows and on the Elemental Plane of Water.
-Features:
-Age. Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.
-
-Size. Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.
-
-Speed. Your base walking speed is 30 feet.
-
-Darkvision. Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
-
-Fey Ancestry. You have advantage on saving throws against being charmed, and magic can't put you to sleep.
-
-Trance. Elves do not sleep. Instead they meditate deeply, remaining semi-conscious, for 4 hours a day. The Common word for this meditation is trance. While meditating, you dream after a fashion; such dreams are actually mental exercises that have become reflexive after years of practice. After resting in this way, you gain the same benefit a human would from 8 hours of sleep.
-
-Keen Senses. You have proficiency in the Perception skill.
-
-Sea Elf Training. You have proficiency with the spear, trident, light crossbow, and net.
-
-Child of the Sea. You have a swimming speed of 30 feet, and you can breathe air and water.
-
-Friend of the Sea. Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed.
-
-Languages. You can speak, read, and write Common, Elven, and Aquan.
+{
+    "Name": "Sea-elf- Mordenkainen's Tome of Foes",
+    "Description": "Sea elves fell in love with the wild beauty of the ocean in the earliest days of the multiverse. While other elves traveled from realm to realm, the sea elves navigated the deepest currents and explored the waters across a hundred worlds. Today, they live in small, hidden communities in the ocean shallows and on the Elemental Plane of Water.",
+    "ASI": "Ability Score Increase. Your Dexterity score increases by 2, and your Constitution score increases by 1.\n",
+    "Features": "Age. Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.\n\nSize. Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.\n\nSpeed. Your base walking speed is 30 feet.\n\nDarkvision. Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.\n\nFey Ancestry. You have advantage on saving throws against being charmed, and magic can't put you to sleep.\n\nTrance. Elves do not sleep. Instead they meditate deeply, remaining semi-conscious, for 4 hours a day. The Common word for this meditation is trance. While meditating, you dream after a fashion; such dreams are actually mental exercises that have become reflexive after years of practice. After resting in this way, you gain the same benefit a human would from 8 hours of sleep.\n\nKeen Senses. You have proficiency in the Perception skill.\n\nSea Elf Training. You have proficiency with the spear, trident, light crossbow, and net.\n\nChild of the Sea. You have a swimming speed of 30 feet, and you can breathe air and water.\n\nFriend of the Sea. Using gestures and sounds, you can communicate simple ideas with any beast that has an innate swimming speed.\n\nLanguages. You can speak, read, and write Common, Elven, and Aquan.\n"
+}

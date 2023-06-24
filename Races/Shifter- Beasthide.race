@@ -1,9 +1,6 @@
-Name: Shifter- Beasthide
-ASI: Ability Score Increase. Your Constitution score increases by 2.
-
-Description:
-Stoic and solid, a beasthide shifter draws strength and stability from the beast within. Beasthide shifters are typically tied to the bear or the boar, but any creature known for its toughness could apply.
-Features:
-Tough. You have proficiency in the Athletics skill.
-
-Shifting Feature. Whenever you shift, you gain 1d6 additional temporary hit points, and while shifted, you have a +1 bonus to your AC.
+{
+    "Name": "Shifter- Beasthide",
+    "Description": "Stoic and solid, a beasthide shifter draws strength and stability from the beast within. Beasthide shifters are typically tied to the bear or the boar, but any creature known for its toughness could apply.",
+    "ASI": "Ability Score Increase. Your Constitution score increases by 2.\n",
+    "Features": "Tough. You have proficiency in the Athletics skill.\n\nShifting Feature. Whenever you shift, you gain 1d6 additional temporary hit points, and while shifted, you have a +1 bonus to your AC.\n"
+}

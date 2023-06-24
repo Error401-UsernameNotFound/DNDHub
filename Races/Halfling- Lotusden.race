@@ -1,9 +1,6 @@
-Name: Halfling- Lotusden
-ASI: Ability Score Increase. Your Wisdom score increases by 1.
-
-Description:
-Long tied to the natural heart of the Lotusden Greenwood, these halflings have adapted to live synergistically with the chaotic laws of the wilds.
-Features:
-Children of the Woods. You know the Druidcraft Cantrip. At 3rd level, you can cast the Entangle spell once per long rest. At 5th level, you can cast Spike Growth spell once per long rest. These spells don't require the material components normally required. Wisdom is your spellcasting ability for these spells.
-
-Timberwalk. Ability checks made to track you are at disadvantage and you can move through difficult terrain made of non-magical plants and overgrowth without expending extra movement.
+{
+    "Name": "Halfling- Lotusden",
+    "Description": "Long tied to the natural heart of the Lotusden Greenwood, these halflings have adapted to live synergistically with the chaotic laws of the wilds.",
+    "ASI": "Ability Score Increase. Your Wisdom score increases by 1.\n",
+    "Features": "Children of the Woods. You know the Druidcraft Cantrip. At 3rd level, you can cast the Entangle spell once per long rest. At 5th level, you can cast Spike Growth spell once per long rest. These spells don't require the material components normally required. Wisdom is your spellcasting ability for these spells.\n\nTimberwalk. Ability checks made to track you are at disadvantage and you can move through difficult terrain made of non-magical plants and overgrowth without expending extra movement.\n"
+}

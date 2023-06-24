@@ -1,29 +1,6 @@
-Name: Human- Mark of Sentinel
-ASI: Ability Score Increase. Your Constitution score increases by 2, and your Wisdom score increases by 1.
-
-Description:
-our Human has the Mark of Sentinel, replace all Racial Traits found in the Player's Handbook with these, except for Age, Alignment, Size, and Speed.
-Features:
-Sentinel's Intuition. Whenever you make an Wisdom (Insight) or a Wisdom (Perception) check, you can roll a d4 and add the number rolled to the total ability check.
-
-Guardian's Shield. You can cast the Shield spell with this trait. Once you cast this spell with this trait, you can't cast that spell again until you finish a Long Rest. Wisdom is your Spellcasting Ability for these spells.
-
-Vigilant Guardian Once a creature that you can see within 5ft of you is hit with an attack roll, you can use your reaction to swap places with the creature, and you are hit by the attack instead. Once you use this trait, you can't do so again until you finish a long rest.
-
-Spells of the Mark. If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Sentinel Spells table are added to the spell list of your Spellcasting class.
-Mark of Sentinel Spell
-
-Spell Level		Spell		
---------------------------------------------------------------------------------------------------------------
-1st		Compelled Duel		
---------------------------------------------------------------------------------------------------------------
-2nd		Warding Bond		
---------------------------------------------------------------------------------------------------------------
-3rd		Counterspell		
---------------------------------------------------------------------------------------------------------------
-4th		Death Ward		
---------------------------------------------------------------------------------------------------------------
-5th		Bigby's Hand		
---------------------------------------------------------------------------------------------------------------
-
-
+{
+    "Name": "Human- Mark of Sentinel",
+    "Description": "our Human has the Mark of Sentinel, replace all Racial Traits found in the Player's Handbook with these, except for Age, Alignment, Size, and Speed.",
+    "ASI": "Ability Score Increase. Your Constitution score increases by 2, and your Wisdom score increases by 1.\n",
+    "Features": "Sentinel's Intuition. Whenever you make an Wisdom (Insight) or a Wisdom (Perception) check, you can roll a d4 and add the number rolled to the total ability check.\n\nGuardian's Shield. You can cast the Shield spell with this trait. Once you cast this spell with this trait, you can't cast that spell again until you finish a Long Rest. Wisdom is your Spellcasting Ability for these spells.\n\nVigilant Guardian Once a creature that you can see within 5ft of you is hit with an attack roll, you can use your reaction to swap places with the creature, and you are hit by the attack instead. Once you use this trait, you can't do so again until you finish a long rest.\n\nSpells of the Mark. If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Sentinel Spells table are added to the spell list of your Spellcasting class.\nMark of Sentinel Spell\n\nSpell Level\t\tSpell\t\t\n--------------------------------------------------------------------------------------------------------------\n1st\t\tCompelled Duel\t\t\n--------------------------------------------------------------------------------------------------------------\n2nd\t\tWarding Bond\t\t\n--------------------------------------------------------------------------------------------------------------\n3rd\t\tCounterspell\t\t\n--------------------------------------------------------------------------------------------------------------\n4th\t\tDeath Ward\t\t\n--------------------------------------------------------------------------------------------------------------\n5th\t\tBigby's Hand\t\t\n--------------------------------------------------------------------------------------------------------------\n\n\n"
+}

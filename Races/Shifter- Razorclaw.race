@@ -1,7 +1,6 @@
-Name: Shifter- Razorclaw
-ASI: Ability Score Increase. Your Dexterity score increases by 1.
-
-Description:
-ce: Unearthed Arcana 1 - EberronAs a razorclaw shifter, you make swift, slashing strikes in battle
-Features:
-Shifting Feature. While shifting, you can make an unarmed strike as a bonus action. You can use your Dexterity for its attack roll and damage bonus, and this attack deals slashing damage.
+{
+    "Name": "Shifter- Razorclaw",
+    "Description": "ce: Unearthed Arcana 1 - EberronAs a razorclaw shifter, you make swift, slashing strikes in battle",
+    "ASI": "Ability Score Increase. Your Dexterity score increases by 1.\n",
+    "Features": "Shifting Feature. While shifting, you can make an unarmed strike as a bonus action. You can use your Dexterity for its attack roll and damage bonus, and this attack deals slashing damage.\n"
+}

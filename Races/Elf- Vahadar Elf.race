@@ -1,11 +1,6 @@
-Name: Elf- Vahadar Elf
-ASI: Ability Score Increase. Your Wisdom score increases by 1.
-
-Description:
-The Vahadar are elves who dwell in the cities of Kaladesh. They are comfortable with technology, and work as planners, architects, aether-seers, or inventors. Some of them use the techniques of Bishtahar cultivators to grow food on rooftops, towers, and greenways. The Vahadar are generally integrated into the rest of society on Kaladesh, living in cities dominated by the other races (though, as in Ghirapur, many of them live in specific garden-like neighborhoods) and engaging in trade.
-Features:
-Elf Weapon Training. You have proficiency with the longsword, shortsword, shortbow, and longbow.
-
-Cantrip. You know one cantrip of your choice from the Druid spell list. Wisdom is your spellcasting ability for it.
-
-Extra Language. You can speak, read, and write one extra language of your choice.
+{
+    "Name": "Elf- Vahadar Elf",
+    "Description": "The Vahadar are elves who dwell in the cities of Kaladesh. They are comfortable with technology, and work as planners, architects, aether-seers, or inventors. Some of them use the techniques of Bishtahar cultivators to grow food on rooftops, towers, and greenways. The Vahadar are generally integrated into the rest of society on Kaladesh, living in cities dominated by the other races (though, as in Ghirapur, many of them live in specific garden-like neighborhoods) and engaging in trade.",
+    "ASI": "Ability Score Increase. Your Wisdom score increases by 1.\n",
+    "Features": "Elf Weapon Training. You have proficiency with the longsword, shortsword, shortbow, and longbow.\n\nCantrip. You know one cantrip of your choice from the Druid spell list. Wisdom is your spellcasting ability for it.\n\nExtra Language. You can speak, read, and write one extra language of your choice.\n"
+}

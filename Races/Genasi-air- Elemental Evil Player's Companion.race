@@ -1,19 +1,6 @@
-Name: Genasi-air- Elemental Evil Player's Companion
-ASI: Ability Score Increase. Your Constitution score increases by 2, and Dexterity score increases by 1.
-
-Description:
-Those who think of other planes at all consider them remote, distant realms, but planar influence can be felt throughout the world. It sometimes manifests in beings who, through an accident of birth, carry the power of the planes in their blood. The genasi are one such people, the offspring of genies and mortals.As an air genasi, you are descended from the djinn. As changeable as the weather, your moods shift from calm to wild and violent with little warning, but these storms rarely last long.Air genasi typically have light blue skin, hair, and eyes. A faint but constant breeze accompanies them, tousling the hair and stirring the clothing. Some air genasi speak with breathy voices, marked by a faint echo. A few display odd patterns in their flesh or grow crystals from their scalps.
-Features:
-Age. Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years.
-
-Alignment. Independent and self-reliant, genasi tend toward a neutral alignment.
-
-Size. Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall. Your size is Medium.
-
-Speed. Your base walking speed is 30 feet.
-
-Unending Breath. You can hold your breath indefinitely while you’re not incapacitated.
-
-Mingle with the Wind. You can cast the Levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell.
-
-Languages. You can speak, read, and write Common and Primordial. Primordial is a guttural language, filled with harsh syllables and hard consonants.
+{
+    "Name": "Genasi-air- Elemental Evil Player's Companion",
+    "Description": "Those who think of other planes at all consider them remote, distant realms, but planar influence can be felt throughout the world. It sometimes manifests in beings who, through an accident of birth, carry the power of the planes in their blood. The genasi are one such people, the offspring of genies and mortals.As an air genasi, you are descended from the djinn. As changeable as the weather, your moods shift from calm to wild and violent with little warning, but these storms rarely last long.Air genasi typically have light blue skin, hair, and eyes. A faint but constant breeze accompanies them, tousling the hair and stirring the clothing. Some air genasi speak with breathy voices, marked by a faint echo. A few display odd patterns in their flesh or grow crystals from their scalps.",
+    "ASI": "Ability Score Increase. Your Constitution score increases by 2, and Dexterity score increases by 1.\n",
+    "Features": "Age. Genasi mature at about the same rate as humans and reach adulthood in their late teens. They live somewhat longer than humans do, up to 120 years.\n\nAlignment. Independent and self-reliant, genasi tend toward a neutral alignment.\n\nSize. Genasi are as varied as their mortal parents but are generally built like humans, standing anywhere from 5 feet to over 6 feet tall. Your size is Medium.\n\nSpeed. Your base walking speed is 30 feet.\n\nUnending Breath. You can hold your breath indefinitely while you\u2019re not incapacitated.\n\nMingle with the Wind. You can cast the Levitate spell once with this trait, requiring no material components, and you regain the ability to cast it this way when you finish a long rest. Constitution is your spellcasting ability for this spell.\n\nLanguages. You can speak, read, and write Common and Primordial. Primordial is a guttural language, filled with harsh syllables and hard consonants.\n"
+}
