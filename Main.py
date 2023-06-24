@@ -119,13 +119,45 @@ skillsCol = sg.Column([
     [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Stealth'),sg.Text('Stealth',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
     [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='Survival'),sg.Text('Survival',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))]
     ])
+ActionBlock = sg.Column([
+    [sg.Text('Actions',s=(20,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],15))],
+    [sg.Listbox(['=== ACTIONS ==='],s=(30,8),key='Actions',font=(sg.DEFAULT_FONT[0],10),pad=(10,0)),sg.Listbox(['=== BONUS ACTIONS ==='],s=(30,8),key='Bonus actions',font=(sg.DEFAULT_FONT[0],10),pad=(10,0))],
+    [sg.Text('Weapon Attacks & Cantrips',s=(30,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],15))],
+    [sg.Table([[]],['    Name    ','Hit','Damage/Type','      Notes      '],s=(None,8),key='AttackTable',pad=(0,0))]
+])
 InictiveBlock = sg.Column([
-    [],
+    [sg.Frame('HIT POINTS',[
+        [sg.Text('Max HP',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='c'),sg.Text('Current HP',s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='c'),sg.Text('Temp HP',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='c')],
+        [sg.Text('100',s=(5,1),pad=(15,0),font=(sg.DEFAULT_FONT[0],15),justification='c',key='Max HP'),sg.Text('100',s=(9,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],15),justification='c',key='CurrentHP'),sg.Text('',s=(3,1)),sg.Text('100',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],15),justification='c',key='TempHP')],
+    ],title_location='s')],
+    [sg.Text('',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Frame('Initiative',[ #do not question the spagettii
+        [sg.Text('+4',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],15),justification='c',key='Initiative')]
+    ],title_location='s',pad=(20,0)),sg.Frame('Armor Class',[
+        [sg.Text('10',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],15),justification='c',key='Armor Class')]
+    ],title_location='s',pad=(15,0))],
+
+    [sg.Frame('Defences',[
+        [sg.Multiline("Resistences:\nImmunities:",s=(35,3),pad=(10,0),font=('Helvetica',10),disabled=True,background_color='#2c2825',no_scrollbar=True,border_width=0)]
+    ],title_location='s',element_justification='c',pad=(20,None))],
+
+    [sg.Frame('Proficiency Bonus',[
+        [sg.Text('+2',s=(3,1),pad=(15,0),font=(sg.DEFAULT_FONT[0],10),justification='c')]
+    ],title_location='s',element_justification='c',pad=(90,None))],
+
+    [sg.Frame('Senses',[
+        [sg.Text('10',s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='c'),sg.Text('Passive Wisdom (Percception)',s=(25,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+        [sg.Text('10',s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='c'),sg.Text('Passive Wisdom (Insight)',s=(25,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+        [sg.Text('10',s=(5,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),justification='c'),sg.Text('Passive Intellegence (Investigation)',s=(25,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    ],title_location='s',pad=(20,None))],
+    [sg.Text('',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
+
 ])
 CharacterSheet = [
-    [sg.Text('Characture Name',s=(35,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],20)), sg.Text('Class and level',s=(20,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],10)), sg.Text('Race',s=(30,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],10)), sg.Text('Background',s=(20,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],10))],
+    [sg.Text('Character Name',s=(35,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],20)), sg.Text('Class and level',s=(20,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],10)), sg.Text('Race',s=(30,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],10)), sg.Text('Background',s=(15,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],10))],
     [rq.makeModifierColoum('Strength',''),rq.makeModifierColoum('Dexterity','0'),rq.makeModifierColoum('Constitution','1'),rq.makeModifierColoum('Intellegence','2'),rq.makeModifierColoum('Wisdom','3'),rq.makeModifierColoum('Charisma','4')],
-    [skillsCol,savingThrowCol],
+    [skillsCol,savingThrowCol,ActionBlock,InictiveBlock],
 ]
 
 
@@ -144,7 +176,7 @@ subraceList = []
 currentRace = ''
 
 while True:
-    event, values = mainWindow.read()
+    event, values = dWindow.read()
     if event == sg.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
         break
     if event == "Characters" and state != 0:
