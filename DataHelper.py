@@ -29,21 +29,8 @@ class dataHelper:
 
     def loadOverideClass(self,clas):
         Rfile = open('Classes Overide/'+clas+'.clas','r',encoding='utf-8')
-        Rtxt = Rfile.readlines()
-        data = {}
-        data['Name'] = Rtxt[0].removeprefix('Name: ').removesuffix('\n')
-        lstart = 0
-        c = 4
-        for i in Rtxt[4:len(Rtxt)-1]:
-            if i == 'Layout:\n': lstart = c
-            c += 1
-
-        data['Info'] = ''.join(Rtxt[3:lstart])
-        data['Layout'] = Rtxt[lstart+1:len(Rtxt)]
-        try:
-            self.saveClass(data)
-        except Exception as e:
-            print(e)
+        data = json.load(Rfile)
+        Rfile.close()
         return data
     def saveSubclass(self,data:dict):
         pass

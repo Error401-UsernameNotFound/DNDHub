@@ -391,34 +391,34 @@ class requester:
                 return dic[i]
         return -1
 
-    def loadLayout(self,clas,level):
+    def loadLayout(self,clas:str,level):
         try:
             d = self.dh.loadOverideClass(clas)
         except:
             d = self.dh.loadClass(clas)
         dout:list = d['Layout']
-        layout = []
-        c = 'class t:\n def __init__(self) -> None:\n  pass\n def rL(self):\n  return layout' #injected class wrapper
-        code = 'import PySimpleGUI as sg\nlayout =[\n'+'\n,'.join(dout)+']\n\n'+c
+        l = []
+        clas = clas.replace('-','_')
+        c = 'class t:\n def __init__(self) -> None:\n  self.'+clas+' =[\n'+'\n,'.join(dout)+']\n def rL(self):\n  return self.'+clas+'' #injected class wrapper
+        code = 'import PySimpleGUI as sg\n\n'+c
         with open('temp.py','w',encoding='utf-8') as f: f.write(code) 
         import temp
         tcode = temp.t()
         l:list = tcode.rL() #this works
         #wipe temp.py 
-        os.remove('temp.py')
+#        os.remove('temp.py')
         #correct some formating
         textcolor = ''
+        layout = []
         for i in l:
             if type(i) == sg.Text:
                 textcolor = i.TextColor
             if type(i) == sg.Multiline:
-                i.DefaultText = i.DefaultText
                 i.BackgroundColor = '#2c2825'
             if type(i) == sg.DropDown:
                 i.BackgroundColor = '#2c2825'
                 i.button_background_color = '#2c2825'
                 i.TextColor = textcolor
-            
             layout.append([i])
         return layout
     
@@ -437,11 +437,10 @@ class requester:
     
     def makeModifierColoum(self,ScoreType:str,keymod:str):
         L = [
-            [sg.Text(ScoreType,s=(15,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],15),justification='c')],
-            [sg.Text('-1',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],20),key='mod'+keymod,justification='c')],
+            [sg.Button('↓',key='d'+keymod),sg.Text('-1',s=(7,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],20),key='mod'+keymod,justification='c'),sg.Button('↑',key='d'+keymod)],
             [sg.Text('8',s=(21,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='TotalScore'+keymod,justification='c')],
         ]
-        return sg.Column(L,justification='c')
+        return sg.Frame(ScoreType,L,title_location='n',font=(sg.DEFAULT_FONT[0],15),element_justification='c')
     
     def calculateCost(self,Score):
         #distence from 8
