@@ -3,6 +3,7 @@ import PySimpleGUI as sg
 import DataHelper as dh
 from requests.exceptions import ConnectionError
 import os
+import importlib
 
 simpleWeapons = ['Club','Dagger','Greatclub','Handaxe','Javelin','Light hammer','Mace','Quarterstaff','Sickle','Spear','Crossbow, light','Dart','Shortbow','Sling']
 MeleeMartialWeapons = ['Battleaxe','Flail','Glaive','Greataxe','Greatsword','Halberd','Lance','Longsword','Maul','Morningstar','Pike','Rapier','Scimitar','Trident','War pick','Warhammer','Whip']
@@ -399,14 +400,15 @@ class requester:
         dout:list = d['Layout']
         l = []
         clas = clas.replace('-','_')
-        c = 'class t:\n def __init__(self) -> None:\n  self.'+clas+' =[\n'+'\n,'.join(dout)+']\n def rL(self):\n  return self.'+clas+'' #injected class wrapper
+        c = 'class t:\n def __init__(self) -> None:\n  self.'+clas+' =[\n   '+'\n   ,'.join(dout)+']\n def rL(self):\n  return self.'+clas+'.copy()' #injected class wrapper
         code = 'import PySimpleGUI as sg\n\n'+c
         with open('temp.py','w',encoding='utf-8') as f: f.write(code) 
         import temp
+        importlib.reload(temp)
         tcode = temp.t()
         l:list = tcode.rL() #this works
         #wipe temp.py 
-#        os.remove('temp.py')
+        #os.remove('temp.py')
         #correct some formating
         textcolor = ''
         layout = []

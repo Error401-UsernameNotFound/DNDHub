@@ -42,19 +42,6 @@ startlayout = [
 ]
 
 
-p = [8,9,10,11,12,13,14,15]
-PointBuyScreen = [
-    [sg.Text('Ability Scores',s=(60,1),pad=(0,4),font=(sg.DEFAULT_FONT[0],20))],
-    [sg.Text('POINTS REMAINING',s=(90,1),pad=(0,4),font=('Helvetica',15),justification = 'c')],
-    [sg.Text('27/27',s=(90,1),pad=(0,4),font=('Helvetica',15),key = 'points',justification = 'c')],
-    [sg.Text('STRENGTH',s=(16,1),pad=(0,4),font=('Helvetica',15)),sg.Text('DEXTERITY',s=(16,1),pad=(0,4),font=('Helvetica',15)),sg.Text('CONSTITUTION',s=(16,1),pad=(0,4),font=('Helvetica',15)),sg.Text('INTELLIGENCE',s=(16,1),pad=(0,4),font=('Helvetica',15)),sg.Text('WISDOM',s=(16,1),pad=(0,4),font=('Helvetica',15)),sg.Text('CHARISMA',s=(16,1),pad=(0,4),font=('Helvetica',15))],
-    [sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(7,0),enable_events=True,key='str'),sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(7,0),enable_events=True,key='dex'),sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(7,0),enable_events=True,key='con'),sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(7,0),enable_events=True,key='int'),sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(7,0),enable_events=True,key='wis'),sg.DropDown(p,s=(21,10),readonly=True,default_value=8,pad=(7,0),enable_events=True,key='cha')],
-    [sg.Text('Score Calculations',s=(90,1),pad=(0,4),font=('Helvetica',15))],
-    [rq.makeScoreColoum('Strength',''),rq.makeScoreColoum('Dexterity','0'),rq.makeScoreColoum('Constitution','1'),rq.makeScoreColoum('Intellegence','2'),rq.makeScoreColoum('Wisdom','3'),rq.makeScoreColoum('Charisma','4')],
-    [sg.Button("Submit",key="Submit pointbuy",s=(20,1),button_color = (C[1],B),border_width=0)]
-]
-
-
 savingThrowCol = sg.Column([
     [sg.Frame('Saving Throws',[
         [sg.Text('+0',s=(3,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10),key='strSave'),sg.Text('Strength',s=(10,1),pad=(0,0),font=(sg.DEFAULT_FONT[0],10))],
