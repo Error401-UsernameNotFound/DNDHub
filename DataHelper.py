@@ -32,7 +32,20 @@ class dataHelper:
         data = json.load(Rfile)
         Rfile.close()
         return data
+    
     def saveSubclass(self,data:dict):
         pass
     def loadSubclass(self):
         pass
+
+    def saveChampaign(self,data:dict):
+        try: Rfile = open('Champaigns/'+data['Title']+'.champ','x',encoding='utf-8')
+        except: Rfile = open('Champaigns/'+data['Title']+'.champ','w',encoding='utf-8')
+        json.dump(data,Rfile,indent=4)
+        Rfile.close()
+        
+    def loadChampaign(self,title:str):
+        Rfile = open('Champaigns/'+title+'.champ','r',encoding='utf-8')
+        data = json.load(Rfile)
+        Rfile.close()
+        return data

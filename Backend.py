@@ -508,3 +508,16 @@ class requester:
                Datapack['cha'] = int(self.firstInt(a))
         print(Datapack)
         return Datapack
+    
+    def findAllFileNames(self,state):
+        if state == 0:
+            target = 'Characters'
+        elif state == 1:
+            target = 'Champaigns'
+        path = os.getcwd()+'\\'+target
+        L = os.listdir(path)
+        cleanList = []
+        if len(L) > 0:
+            for i in L:
+                cleanList.append(i.split('.')[0])
+        return cleanList
