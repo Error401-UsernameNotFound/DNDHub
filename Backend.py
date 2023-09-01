@@ -521,3 +521,35 @@ class requester:
             for i in L:
                 cleanList.append(i.split('.')[0])
         return cleanList
+    
+    def calculateAC(self,Armor,dexMod):
+        dexMod = int(dexMod)
+        if Armor == 'None':
+            return 10 + dexMod
+        if Armor == 'Mage Armor':
+            return 13 + dexMod
+        if Armor == 'Padded' or Armor == 'Leather':
+            return 11 + dexMod
+        if Armor == 'Studded Leather':
+            return 12 + dexMod
+        if Armor == 'Hide':
+            return (12 + dexMod) if dexMod < 3 else 14 
+        if Armor == 'Chain Shirt':
+            return (13 + dexMod) if dexMod < 3 else 15 
+        if Armor == 'Scale Mail' and Armor == 'Spiked Armor' and Armor == 'Breastplate':
+            return (14 + dexMod) if dexMod < 3 else 16
+        if Armor == 'Halfplate':
+            return (15 + dexMod) if dexMod < 3 else 17  
+        if Armor == 'Ring Mail':
+            return 14
+        if Armor == 'Chain Mail':
+            return 16
+        if Armor == 'Splint':
+            return 17
+        if Armor == 'Plate':
+            return 18
+        return 0
+    def calculateProf(self,level):
+        return int((level-1)/4)+2
+    def calculateMod(self,stat):
+        return int(int(stat)/2 - 5)

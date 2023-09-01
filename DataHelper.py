@@ -49,3 +49,9 @@ class dataHelper:
         data = json.load(Rfile)
         Rfile.close()
         return data
+    
+    def loadMonster(self,Location:str) -> dict:
+        Rfile = open(Location,'r',encoding='utf-8')
+        data = json.load(Rfile)
+        Rfile.close()
+        return data

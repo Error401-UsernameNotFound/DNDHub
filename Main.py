@@ -16,7 +16,7 @@ import CharacterSheet as CS
 #Champaign Creator menu
 sys.path.insert(1, os.path.dirname(__file__)+'\Champaign Creation')
 import ChampaignCreator as ChC
-
+import CampaignScreen as CampS
 
 rq = Backend.requester()
 
@@ -33,7 +33,7 @@ top = [
 topColumn = sg.Column(top,justification="c")
 
 CharacterList = [
-    [sg.Listbox(values = [],key="List",background_color=B,s=(45,20))],
+    [sg.Listbox(values = [],key="List",background_color=B,s=(45,20),enable_events=True)],
     [sg.Button("Make a new character",key='newC',s=(40,1),button_color = (C[1],B),border_width=0)],
     [sg.Text('')]
 ]
@@ -69,9 +69,9 @@ while True:
             event, values = mainWindow.read(timeout=0.01)
             mainWindow['List'].update(values = rq.findAllFileNames(state))
         event, values = mainWindow.read()
-        
         if event == sg.WIN_CLOSED or event == 'Cancel': # if user closes window or clicks cancel
             break
+
         if event == "Characters" and state != 0:
             state = 0
             mainWindow["Characters"].update(button_color = (C[1],B))
@@ -79,6 +79,8 @@ while True:
             mainWindow['newC'].update(text = 'Make a new character')
             event, values = mainWindow.read(timeout=0.01)
             mainWindow['List'].update(values = rq.findAllFileNames(state))
+        
+
         if event == "Campaigns" and state != 1:
             state = 1
             mainWindow["Campaigns"].update(button_color = (C[1],B))
@@ -86,6 +88,10 @@ while True:
             mainWindow['newC'].update(text = 'Make a new campaign')
             event, values = mainWindow.read(timeout=0.01)
             mainWindow['List'].update(values = rq.findAllFileNames(state))
+        if event == 'List' and state == 1:
+            state = 11
+            mainWindow.hide()
+        
         if event == "newC" and state == 0:
             state = 2
             mainWindow.hide()
@@ -112,6 +118,9 @@ while True:
     if state == 10:
         StepTen = ChC.loadStepTen()
         state = StepTen.WindowActive()
+    if state == 11:
+        StepEleven = CampS.loadStepEleven(values['List'][0])
+        state = StepEleven.WindowActive()
 
 
 mainWindow.close()

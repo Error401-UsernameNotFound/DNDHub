@@ -1,4 +1,92 @@
 {
     "Title": "Selene's Revenge",
-    "Description": "The gods cant help you anymore"
+    "Description": "The gods cant help you anymore",
+    "Monsters": {
+        "Monster": {
+            "Name": "Monster",
+            "CR": "7",
+            "Type": "humanoid",
+            "Size": "medium",
+            "Armor": "none",
+            "Shield": 0,
+            "NatArmor": 8,
+            "HP": "22",
+            "Speed": "30",
+            "Alignment": "any alignment",
+            "Stats": [
+                "10",
+                "10",
+                "10",
+                "10",
+                "10",
+                "10"
+            ],
+            "BlindSight": "10",
+            "Darkvision": "10",
+            "Tremorsense": "10",
+            "Truesight": "10",
+            "Telepathy": 0,
+            "BurrowSpeed": "0",
+            "ClimbSpeed": "0",
+            "FlySpeed": "0",
+            "SaveThrows": [
+                {
+                    "name": "str",
+                    "order": 0
+                }
+            ],
+            "Skills": [
+                {
+                    "name": "acrobatics",
+                    "stat": "dex"
+                },
+                {
+                    "name": "perception",
+                    "stat": "wis"
+                }
+            ],
+            "DamageRes": [
+                {
+                    "name": "acid",
+                    "note": " (Vulnerable)",
+                    "type": "v"
+                }
+            ],
+            "Conditions": [
+                {
+                    "name": "blinded"
+                }
+            ],
+            "Languages": [
+                {
+                    "name": "Sylvan",
+                    "speaks": true
+                }
+            ],
+            "Features": [
+                {
+                    "name": "a",
+                    "desc": "a"
+                }
+            ],
+            "Actions": [
+                {
+                    "name": "a",
+                    "desc": "a"
+                }
+            ],
+            "BonusActions": [
+                {
+                    "name": "a",
+                    "desc": "a"
+                }
+            ],
+            "Reactions": [
+                {
+                    "name": "a",
+                    "desc": "a"
+                }
+            ]
+        }
+    }
 }
