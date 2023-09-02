@@ -32,7 +32,7 @@ class loadStepEleven:
             if event == "Players":
                 pass
             if event == "Void":
-                VoidScreen = V.Void()
+                VoidScreen = V.Void(self.CampaignData)
                 VoidScreen.WindowActive()
             if event == "Back":
                 break
