@@ -22,7 +22,7 @@ class Void():
                 background_color= C[0],
                 
             )],
-           [sg.Text('Graph size:'),sg.Text('600,600',key='GSize'), sg.Text('|  # of rows'),sg.Text('10',key='NumbX'), sg.Text('|  # of coloums'),sg.Text('10',key='NumbY')],
+           [sg.Text('Graph size:'),sg.Text('600,600',key='GSize'), sg.Text('|  # of rows'),sg.Text('10',key='NumbX'), sg.Text('|  # of coloums'),sg.Text('10',key='NumbY'),sg.Text('Background Color'),sg.Text('Line Color')],
            [sg.Input(s=(17,None),key='Size',pad=(10,None),do_not_clear=False),sg.Text('  '),sg.Input(s=(10,None),key='Rows',do_not_clear=False),sg.Text('   '),sg.Input(s=(10,None),key='Coloums',do_not_clear=False)],
            [sg.Button("Back",key='Back',s=(10,1),button_color = (C[1],B),border_width=0),sg.Button("Submit Changes",key='Submit',s=(15,1),button_color = (C[1],B),border_width=0)],
         ]
