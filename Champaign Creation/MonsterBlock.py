@@ -47,7 +47,7 @@ class Block:
             [sg.Text('Reactions',font=(None,20))],
             self.getReactions(),
         ]
-        self.w = sg.Window('D&DHub',Display)
+        self.w = sg.Window('D&DHub',Display,grab_anywhere=True)
     def WindowActive(self):
         e, v = self.w.read(timeout=0)
     
@@ -113,21 +113,19 @@ class Block:
         return ls
     def Sence(self):
         res = ''
-        if self.InternalData['BlindSight'] != '0':
-            res += 'BlindSight ' + self.InternalData['BlindSight'] +" ft., "
-        if self.InternalData['Darkvision'] != '0':
-            res += 'Darkvision ' + self.InternalData['Darkvision'] +" ft., "
-        if self.InternalData['Tremorsense'] != '0':
-            res += 'Tremorsense ' + self.InternalData['Tremorsense'] +" ft., "
-        if self.InternalData['Truesight'] != '0':
-            res += 'Truesight ' + self.InternalData['Truesight'] +" ft., "
+        if str(self.InternalData['BlindSight']) != '0':
+            res += 'BlindSight ' + str(self.InternalData['BlindSight']) +" ft., "
+        if str(self.InternalData['Darkvision']) != '0':
+            res += 'Darkvision ' + str(self.InternalData['Darkvision']) +" ft., "
+        if str(self.InternalData['Tremorsense']) != '0':
+            res += 'Tremorsense ' + str(self.InternalData['Tremorsense']) +" ft., "
+        if str(self.InternalData['Truesight']) != '0':
+            res += 'Truesight ' + str(self.InternalData['Truesight']) +" ft., "
         return res
-        
-        pass
     def SB(self,string,Score):
         mod = int(int(Score)/2 - 5)
         layout = [
             [sg.Text(string,justification='Center',s=(4,1))],
-            [sg.Text(Score + ' (' + str(mod) + ')',justification='Center',s=(4,1))],
+            [sg.Text(str(Score) + ' (' + str(mod) + ')',justification='Center',s=(4,1))],
         ]
         return sg.Column(layout)
