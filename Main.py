@@ -7,10 +7,7 @@ import Backend
 
 #all of the characture creation screens
 sys.path.insert(1, os.path.dirname(__file__)+'\Character Creation')
-import CharacterColumn as cc
-import Races as R
-import ClassesMenu as CM
-import PointBuyScreen as PBS
+import CharacterSettings as CC
 import CharacterSheet as CS
 
 #Champaign Creator menu
@@ -98,19 +95,12 @@ while True:
         if event == "newC" and state == 1:
             state = 10
             mainWindow.hide()
+    
+
     if state == 2:#General character creator
-        stepOne = cc.loadStepOne()
+        stepOne = CC.loadStepOne()
         state, tempCharacter = stepOne.WindowActive()
-    if state == 3:#Race selection
-        StepTwo = R.loadStepTwo()
-        state, tempCharacter = StepTwo.WindowActive(tempCharacter)
-    if state == 4:#class selection
-        StepThree = CM.loadStepThree()
-        state, tempCharacter = StepThree.WindowActive(tempCharacter)
-    if state == 5:#pointBuy
-        StepFour = PBS.loadStepFour(tempCharacter)
-        state, tempCharacter = StepFour.WindowActive(tempCharacter)
-    if state == 6:#sheet
+    if state == 3:#sheet
         StepFive = CS.loadStepFive()
         StepFive.WindowActive(tempCharacter)
     
