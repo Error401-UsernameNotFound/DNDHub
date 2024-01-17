@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="475.0" maxWidth="430.0" minHeight="475.0" minWidth="430.0" prefHeight="475.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <effect>
+      <Blend />
+   </effect>
+   <children>
+      <Rectangle fx:id="background" fill="#2c2825" height="475.0" smooth="false" stroke="#2c2825" strokeLineCap="BUTT" strokeWidth="0.0" width="430.0" />
+      <Label layoutX="188.0" layoutY="14.0" style="-fx-text-fill: #fdcb52;" text="D&amp;D Hub" textFill="#fcca53" />
+      <Button fx:id="CharactersButt" layoutX="87.0" layoutY="60.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="112.0" style="-fx-text-fill: #fdcb52; -fx-background-color: transparent;" text="My Characters" />
+      <Button fx:id="CampaignsButt" layoutX="241.0" layoutY="60.0" mnemonicParsing="false" style="-fx-text-fill: #8d702d; -fx-background-color: transparent;" text="My Campaigns" />
+      <ListView fx:id="DataView" layoutX="40.0" layoutY="108.0" prefHeight="314.0" prefWidth="346.0" style="-fx-background-color: #2c2825; -fx-border-color: #000000; -fx-border-width: 1;" />
+      <ScrollBar layoutX="376.0" layoutY="108.0" orientation="VERTICAL" prefHeight="314.0" prefWidth="3.0" style="-fx-background-color: #fdcb52;" />
+      <Button fx:id="MakeNewButt" layoutX="130.0" layoutY="429.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="170.0" style="-fx-text-fill: #fdcb52; -fx-background-color: transparent;" text="Make a new character" />
+   </children>
+</AnchorPane>
